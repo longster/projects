@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<small><i>BODY SECTION</i></small>
+<h1>{{ page.title }}</h1>
+{{ content }}

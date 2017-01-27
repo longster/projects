@@ -1,0 +1,10 @@
+    <footer>
+      <small><i>NAV FOOTER SECTION</i></small>
+      <nav>
+        <ul class="menu clearfix float-right">
+          {% for item in site.data.nav-footer %}
+            <li><a href="{{ item.url }}">{{ item.link }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </footer>
