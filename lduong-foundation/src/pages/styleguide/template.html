@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Style Guide</title>
-    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="../assets/css/app.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
 
     <!-- Style guide-specific CSS goes here. -->
@@ -57,7 +57,24 @@
     </style>
   </head>
   <body>
-
+    <!-- Nav -->
+    <div class="top-bar">
+      <div class="top-bar-title">
+        <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+        </span>
+        <div class="title-bar-title text-center"><a href="/">Long Duong</a></div>
+      </div>
+      <div id="responsive-menu">
+        <div class="top-bar-right">
+              <ul class="vertical medium-horizontal menu">
+                <li><a href="/foundation/">Foundation</a></li>
+                  <li><a href="/styleguide/">Styleguide</a></li>
+              </ul>
+        </div>
+      </div>
+    </div>
+    
     <div class="column row">
       <h1>Client Style Guide</h1>
       <p class="lead">This style guide was built with Foundation for Sites. For more information on how to use this responsive front-end framework, check out the documentation, get help from the Foundation community, or request immediate technical support.</p>
