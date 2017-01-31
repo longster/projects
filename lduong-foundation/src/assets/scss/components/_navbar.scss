@@ -1,0 +1,10 @@
+#identity {
+  // Only affects medium screens and larger
+  @include breakpoint(medium) {
+    // All CSS in here goes inside the media query
+    .menu > li > a {
+      padding: 2rem 1rem
+    }
+  }
+
+}
