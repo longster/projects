@@ -1,0 +1,182 @@
+// Theme global
+body {
+  letter-spacing: -1px;
+  background: #0d0d0d;
+}
+a, button, .lduong {
+  @extend .smooth
+}
+.swapColorText {
+  color: $brand-primary;
+}
+.swapColorBG {
+  background: $brand-primary;
+  color: $white;
+}
+::-moz-selection {
+  background: $brand-primary;
+  color: #fff;
+  text-shadow: none;
+}
+::selection {
+  background: $brand-primary;
+  color: #fff;
+  text-shadow: none; }
+blockquote {
+  margin-bottom: 0px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: $white;
+  border-left: 0;
+  p {
+    color: $white;
+  }
+}
+
+// Recycle area
+.padded {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+.smooth {
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.bg {
+  background: url('../img/congruent_outline.png') repeat center;
+}
+
+
+// Nav area
+#identity {
+  padding-top: 20px;
+  background-color: transparent;
+  .top-bar,
+  .top-bar ul {
+    background-color: transparent;
+  }
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+  .lduong {
+    fill: $brand-primary;
+  }
+  .lduong:hover {
+    fill: $white;
+  }
+  // Only affects medium screens and larger
+  @include breakpoint(medium) {
+    // All CSS in here goes inside the media query
+    .menu > li > a {
+      padding: 2.5rem 1rem
+    }
+  }
+
+}
+
+
+// Hero area
+#hero {
+  padding-top: 3em;
+  padding-bottom: 4em;
+  color: $white;
+  h1 {
+    line-height: 1em;
+    letter-spacing: -2px;
+  }
+  h2 {
+    font-family: $body-font-family;
+    font-weight: lighter;
+    letter-spacing: -2px;
+  }
+  // Only affects medium screens and larger
+  @include breakpoint(small) {
+    // All CSS in here goes inside the media query
+    h1 {
+      font-size: 40px;
+    }
+  }
+  // Only affects medium screens and larger
+  @include breakpoint(medium) {
+    // All CSS in here goes inside the media query
+    h1 {
+      font-size: 60px;
+    }
+  }
+  // Only affects medium screens and larger
+  @include breakpoint(large) {
+    // All CSS in here goes inside the media query
+    h1 {
+      font-size: 80px;
+    }
+  }
+}
+
+
+// Service area
+#services {
+  background: $white;
+  @extend .padded;
+}
+h3 {
+}
+
+// Quote
+#quote .qod-text {
+    font-size: 2.4em;
+    line-height: 1.2em;
+    margin-bottom: 0;
+}
+#quote .qod-author {
+    font-size: 1.0em;
+    padding-top: 5px;
+    a {
+      color: $white;
+    }
+    a:hover {
+      color: darken($brand-primary, 10%);
+    }
+}
+
+// Folio area
+#folio {
+  background: $white;
+  padding-top: 55px;
+  img {
+    padding-bottom: 20px;
+  }
+}
+
+// Social area
+#social {
+  @extend .padded;
+}
+
+// Bio area
+#bio {
+  background: #1b1b1b;
+  color: #939393;
+  @extend .padded;
+}
+
+// Capabilities
+#capabilities {
+  background: $white;
+  @extend .padded;
+  > .row:first-child {
+    padding-bottom: 50px;
+  }
+}
+
+// Footer area
+footer {
+  background: #0d0d0d;
+  color: $black;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
