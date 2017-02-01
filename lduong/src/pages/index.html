@@ -7,10 +7,19 @@ body_class: index
   <div class="bg">
     {{> nav}}
     <!-- Hero -->
-    <div id="hero" class="row text-center">
+    <div id="hero" class="row">
+      <div class="small-8 small-centered medium-6 medium-centered large-4 large-centered columns">
+        <h1 class="bar">LONG DUONG</h1>
+        <h5>UX &amp; Front End Designer</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="slogan">
+    <div class="row">
       <div class="large-12 columns">
-        <h1>A <span class="swapColorText">one</span> of a kind that <span class="swapColorText">solves diverse</span> issues on <span class="swapColorText">multiple platforms</span>.</h1>
-        <h2>Creativity + Interaction + Experience + Business</h2>
+        <h2>A <span class="swapColorText">one</span> of a kind that <span class="swapColorText">solves diverse</span> issues on <span class="swapColorText">multiple platforms</span>.</h2>
+        <h3>Creativity + Interaction + Experience + Business</h3>
       </div>
     </div>
   </div>
@@ -18,16 +27,19 @@ body_class: index
 
   <!-- Services -->
   <div id="services">
-    <div class="row text-center">
+    <div class="row">
       <div class="small-12 medium-4 columns">
+        <img src="{{root}}assets/img/point-dev.png" />
         <h3>Design & Development.</h3>
         <p>Fully capable of conceptualize to implementation for desktop, mobile & web. Anywhere from simple ideas to large projects.</p>
       </div>
       <div class="small-12 medium-4 columns">
+        <img src="{{root}}assets/img/point-analysis.png" />
         <h3>Behavior Analysis.</h3>
         <p>Using usability research and detail oriented design to enhance the engagement between human and computer as well as business and customer.</p>
       </div>
       <div class="small-12 medium-4 columns">
+        <img src="{{root}}assets/img/point-versatile.png" />
         <h3>Absolute Versatility.</h3>
         <p>Extensive experience in designing web/software applications, user interface, advertising prints, industrialized product and interaction designs.</p>
       </div>
@@ -47,7 +59,7 @@ body_class: index
   <section id="folio" class="expanded">
     <div class="row">
       <div class="small-12 medium-8 medium-centered columns">
-        <h3>Selected Work </h3>
+        <h3>Case Studies</h3>
       </div>
     </div>
     {{#each portfolio}}
