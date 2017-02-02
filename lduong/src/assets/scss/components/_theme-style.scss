@@ -6,10 +6,10 @@ a, button, .lduong {
   @extend .smooth
 }
 .swapColorText {
-  color: $brand-primary;
+  color: $light-gray;
 }
 .swapColorBG {
-  background: $brand-primary;
+  background: $dark-gray;
   color: $white;
 }
 .whiteBG {
@@ -52,34 +52,40 @@ h1 {
   line-height: .9em;
   letter-spacing: -5px;
   padding-bottom: .15em;
+  &:after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 45px;
+    height: 5px;
+    background: $white;
+    left: 50%;
+    margin: 21px 0 0 -22.5px;
+  }
 }
 
-h1:after {
-  content: '';
-  display: block;
-  position: relative;
-  width: 45px;
-  height: 5px;
-  background: $white;
-  left: 50%;
-  margin: 21px 0 0 -22.5px;
-}
 h2 {
   font-size: 50px;
   font-family: $body-font-family;
   text-transform: uppercase;
   letter-spacing: -2px;
   font-weight: 100;
+  &:after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 45px;
+    height: 3px;
+    background: $black;
+    left: 50%;
+    margin: 13px 0 0 -22.5px;
+  }
 }
-h2:after {
-  content: '';
-  display: block;
-  position: relative;
-  width: 45px;
-  height: 3px;
-  background: $black;
-  left: 50%;
-  margin: 13px 0 0 -22.5px;
+h3 {
+  font-weight: 100;
+  font-family: $body-font-family;
+  letter-spacing: -1px;
+  text-transform: uppercase;
 }
 h5 {
     font-family: $body-font-family;
@@ -143,7 +149,6 @@ hr {
 
 }
 
-
 // Hero area
 #hero {
   padding-top: 6em;
@@ -169,6 +174,10 @@ hr {
   .medium-4.columns {
     margin-top: 2em;
   }
+  h3 {
+    margin-top: .5em;
+    margin-bottom: 2em;
+  }
   h5 {
     text-transform: uppercase;
   }
@@ -180,31 +189,20 @@ hr {
 
 // Slogan area
 #slogan {
-  padding-top: 55px;
+  @extend .padded;
   @extend .text-center;
+  color: $white;
   h2 {
     line-height: 1em;
-    letter-spacing: -2px;
-  }
-  h3 {
-    font-weight: 100;
-    font-family: $body-font-family;
-    letter-spacing: -2px;
-  }
-  @include breakpoint(medium) {
-    h2 {
-      font-size: 50px;
-    }
-    h3 {
-        font-size: 30px;
+    letter-spacing: -1px;
+    font-size: 30px;
+    &:after {
+    background: $white;
     }
   }
   @include breakpoint(large) {
     h2 {
-      font-size: 70px;
-    }
-    h3 {
-        font-size: 35px;
+    font-size: 40px;
     }
   }
 }
@@ -253,11 +251,15 @@ hr {
 }
 
 // Capabilities
-#capabilities {
+#competencies {
   background: $white;
   @extend .padded;
-  > .row:first-child {
-    padding-bottom: 50px;
+  > .row:first-child .row {
+      margin-top: 3em;
+      margin-bottom: 3em;
+  }
+  h2 {
+    @extend .text-center;
   }
 }
 
