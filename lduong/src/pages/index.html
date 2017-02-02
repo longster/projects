@@ -3,48 +3,14 @@ title: Long Duong
 description: Front End & UX Designer
 body_class: index
 ---
+  {{> hero}}
 
-  <div class="bg">
-    {{> nav}}
-    <!-- Hero -->
-    <div id="hero" class="row">
-      <div class="small-8 small-centered medium-6 medium-centered large-4 large-centered columns">
-        <h1 class="bar">LONG DUONG</h1>
-        <h5>UX &amp; Front End Designer</h5>
-      </div>
-    </div>
-  </div>
+  {{> bio}}
 
-  <div class="slogan">
-    <div class="row">
-      <div class="large-12 columns">
-        <h2>A <span class="swapColorText">one</span> of a kind that <span class="swapColorText">solves diverse</span> issues on <span class="swapColorText">multiple platforms</span>.</h2>
-        <h3>Creativity + Interaction + Experience + Business</h3>
-      </div>
-    </div>
-  </div>
+  {{> specialized}}
 
+  {{> folio}}
 
-  <!-- Services -->
-  <div id="services">
-    <div class="row">
-      <div class="small-12 medium-4 columns">
-        <img src="{{root}}assets/img/point-dev.png" />
-        <h3>Design & Development.</h3>
-        <p>Fully capable of conceptualize to implementation for desktop, mobile & web. Anywhere from simple ideas to large projects.</p>
-      </div>
-      <div class="small-12 medium-4 columns">
-        <img src="{{root}}assets/img/point-analysis.png" />
-        <h3>Behavior Analysis.</h3>
-        <p>Using usability research and detail oriented design to enhance the engagement between human and computer as well as business and customer.</p>
-      </div>
-      <div class="small-12 medium-4 columns">
-        <img src="{{root}}assets/img/point-versatile.png" />
-        <h3>Absolute Versatility.</h3>
-        <p>Extensive experience in designing web/software applications, user interface, advertising prints, industrialized product and interaction designs.</p>
-      </div>
-    </div>
-  </div>
 
   <!-- Quotes -->
   <section id="quote" class="expanded swapColorBG">
@@ -55,20 +21,73 @@ body_class: index
     </div>
   </section>
 
-  <!-- Portfolio -->
-  <section id="folio" class="expanded">
+  <!-- Capabilities -->
+  <section id="capabilities" class="expanded">
     <div class="row">
       <div class="small-12 medium-8 medium-centered columns">
-        <h3>Case Studies</h3>
+        <h3>Capabilities</h3>
+        <div class="row">
+          <div class="small-3 columns">
+            <span class="badge">E</span>Expert
+          </div>
+          <div class="small-3 columns">
+            <span class="badge">P</span>Proficient
+          </div>
+          <div class="small-3 columns">
+            <span class="badge">C</span>Competent
+          </div>
+          <div class="small-3 columns">
+            <span class="badge">N</span>Novice
+          </div>
+        </div>
       </div>
     </div>
-    {{#each portfolio}}
     <div class="row">
-      <div class="large-12 large-centered columns">
-        <img src="{{ this }}">
+      <div class="small-3 columns">
+        <h4>Code</h4>
+        <ul class="no-bullet">
+          <li><span class="badge">E</span>HTML5</li>
+          <li><span class="badge">E</span>SCSS & CSS</li>
+          <li><span class="badge">E</span>PHP</li>
+          <li><span class="badge">E</span>C Sharp</li>
+          <li><span class="badge">E</span>JQuery</li>
+          <li><span class="badge">E</span>YUI</li>
+        </ul>
+      </div>
+      <div class="small-3 columns">
+        <h4>Applications</h4>
+        <ul class="no-bullet">
+          <li><span class="badge">E</span>Photoshop</li>
+          <li><span class="badge">E</span>Illustrator</li>
+          <li><span class="badge">E</span>Experience Design</li>
+          <li><span class="badge">E</span>Indesign</li>
+          <li><span class="badge">E</span>Item</li>
+          <li><span class="badge">E</span>Item</li>
+        </ul>
+      </div>
+      <div class="small-3 columns">
+        <h4>Dev Tools</h4>
+        <ul class="no-bullet">
+        <li><span class="badge">E</span>Item</li>
+        <li><span class="badge">E</span>Item</li>
+        <li><span class="badge">E</span>Item</li>
+        <li><span class="badge">E</span>Item</li>
+        <li><span class="badge">E</span>Item</li>
+        <li><span class="badge">E</span>Item</li>
+        </ul>
+      </div>
+      <div class="small-3 columns">
+        <h4>Multidisciplinary</h4>
+        <ul class="no-bullet">
+          <li><span class="badge">E</span>Cross-Device Design</li>
+          <li><span class="badge">E</span>Rapid Prototype</li>
+          <li><span class="badge">E</span>Grid Based Layout</li>
+          <li><span class="badge">E</span>Typography</li>
+          <li><span class="badge">E</span>Info Architectur</li>
+          <li><span class="badge">P</span>Responsive Design</li>
+        </ul>
       </div>
     </div>
-    {{/each}}
   </section>
 
   <!-- Social Media -->
@@ -79,83 +98,3 @@ body_class: index
       </div>
     </div>
   </section>
-
-  <!-- Capabilities -->
-  <section id="capabilities" class="expanded">
-    <div class="row">
-      <div class="small-12 medium-8 medium-centered columns">
-        <h3>Capabilities</h3>
-        <div class="row">
-          <div class="small-3 columns">
-            Expert
-          </div>
-          <div class="small-3 columns">
-            Proficient
-          </div>
-          <div class="small-3 columns">
-            Competent
-          </div>
-          <div class="small-3 columns">
-            Novice
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-3 columns">
-        <h4>Code</h4>
-        <ul>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-        </ul>
-      </div>
-      <div class="small-3 columns">
-        <h4>Applications</h4>
-        <ul>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-        </ul>
-      </div>
-      <div class="small-3 columns">
-        <h4>Dev Tools</h4>
-        <ul>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-        </ul>
-      </div>
-      <div class="small-3 columns">
-        <h4>Multidisciplinary</h4>
-        <ul>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Footer -->
-  <div id="bio" class="expanded">
-    <div class="row">
-      <div class="small-12 medium-8 medium-centered columns">
-        <h3>My name is Long Duong and I am a UX Designer based in Houston, TX. I have years of extensive experience in a wide variety of industries ranging from Medical, Sales, to Software business.</h3>
-        <p>Currently, I am working full time at cPanel as a UX Designer. I've worked on projects for large and small businesses, even non-profit organizations, and been fortunate to see my work impact business and communities. If time permits, I do a little bit of design experimentation on the web and share my learnings/experiences online. I may even squeeze in certain projects to take on. So, feel free to get in touch with me whether you want to know more about me or have a project of your own that needs to be enhanced on the front-end.</p>
-      </div>
-    </div>
-  </div>

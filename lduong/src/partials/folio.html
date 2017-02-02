@@ -1,0 +1,15 @@
+  <!-- Portfolio -->
+  <section id="folio" class="expanded">
+    <div class="row">
+      <div class="small-12 medium-8 medium-centered columns">
+        <h2>Latest Case Studies</h2>
+      </div>
+    </div>
+    {{#each portfolio}}
+    <div class="row">
+      <div class="large-12 large-centered columns">
+        <img src="{{ this }}">
+      </div>
+    </div>
+    {{/each}}
+  </section>

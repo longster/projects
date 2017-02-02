@@ -1,6 +1,5 @@
 // Theme global
 body {
-  letter-spacing: -1px;
   background: #0d0d0d;
 }
 a, button, .lduong {
@@ -12,6 +11,9 @@ a, button, .lduong {
 .swapColorBG {
   background: $brand-primary;
   color: $white;
+}
+.whiteBG {
+  background: $white;
 }
 ::-moz-selection {
   background: $brand-primary;
@@ -45,6 +47,44 @@ blockquote {
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
 }
+h1 {
+  font-size: 70px;
+  line-height: .9em;
+  letter-spacing: -5px;
+  padding-bottom: .15em;
+}
+
+h1:after {
+  content: '';
+  display: block;
+  position: relative;
+  width: 45px;
+  height: 5px;
+  background: $white;
+  left: 50%;
+  margin: 21px 0 0 -22.5px;
+}
+h2 {
+  font-size: 50px;
+  font-family: $body-font-family;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  font-weight: 100;
+}
+h2:after {
+  content: '';
+  display: block;
+  position: relative;
+  width: 45px;
+  height: 3px;
+  background: $black;
+  left: 50%;
+  margin: 13px 0 0 -22.5px;
+}
+h5 {
+    font-family: $body-font-family;
+    text-transform: uppercase;
+}
 
 .bg {
   background: url('../img/congruent_outline.png') repeat center;
@@ -67,10 +107,10 @@ blockquote {
     height: 70px;
   }
   .lduong {
-    fill: $brand-primary;
+    fill: $white;
   }
   .lduong:hover {
-    fill: $white;
+    fill: $brand-primary;
   }
   .top-bar-title {
     display: block;
@@ -102,40 +142,38 @@ blockquote {
 
 // Hero area
 #hero {
-  padding-top: 8em;
+  padding-top: 6em;
   padding-bottom: 13em;
   @extend .text-center;
   color: $white;
-  h1 {
-    font-size: 70px;
-    line-height: .9em;
-    letter-spacing: -5px;
-    padding-bottom: .15em;
-  }
+}
 
-  h1:after {
-    content: '';
-    display: block;
-    position: relative;
-    width: 45px;
-    height: 5px;
-    background: #FFF;
-    left: 50%;
-    margin: 21px 0 0 -22.5px;
-  }
+// Bio area
+#bio {
+  @extend .whiteBG;
+  /*background: #1b1b1b;
+  color: #939393;*/
+  @extend .padded;
+  @extend .text-center;
+}
+
+// Specialized
+#specialized {
+  @extend .text-center;
+  @extend .padded;
+  @extend .whiteBG;
   h5 {
     text-transform: uppercase;
   }
-  @include breakpoint(large) {
-    h1 {
-    }
+  i {
+    font-size: 80px;
+    font-weight: lighter;
   }
 }
 
 // Slogan area
-.slogan {
+#slogan {
   padding-top: 55px;
-  background: $white;
   @extend .text-center;
   h2 {
     line-height: 1em;
@@ -144,6 +182,7 @@ blockquote {
   h3 {
     font-weight: 100;
     font-family: $body-font-family;
+    letter-spacing: -2px;
   }
   @include breakpoint(medium) {
     h2 {
@@ -195,6 +234,7 @@ blockquote {
 #folio {
   background: $white;
   padding-top: 55px;
+  @extend .text-center;
   img {
     padding-bottom: 20px;
   }
@@ -202,13 +242,6 @@ blockquote {
 
 // Social area
 #social {
-  @extend .padded;
-}
-
-// Bio area
-#bio {
-  background: #1b1b1b;
-  color: #939393;
   @extend .padded;
 }
 
