@@ -37,8 +37,8 @@ blockquote {
 
 // Recycle area
 .padded {
-  padding-top: 55px;
-  padding-bottom: 55px;
+  padding-top: 6em;
+  padding-bottom: 8em;
 }
 .smooth {
   -webkit-transition: all 500ms ease;
@@ -88,6 +88,10 @@ h5 {
 
 .bg {
   background: url('../img/congruent_outline.png') repeat center;
+}
+hr {
+  margin:0 auto;
+  max-width: 100%;
 }
 
 
@@ -162,6 +166,9 @@ h5 {
   @extend .text-center;
   @extend .padded;
   @extend .whiteBG;
+  .medium-4.columns {
+    margin-top: 2em;
+  }
   h5 {
     text-transform: uppercase;
   }
