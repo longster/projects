@@ -81,7 +81,7 @@ h2 {
     margin: 13px 0 0 -22.5px;
   }
 }
-h3 {
+h3, h4 {
   font-weight: 100;
   font-family: $body-font-family;
   letter-spacing: -1px;
@@ -93,7 +93,10 @@ h5 {
 }
 
 .bg {
-  background: url('../img/congruent_outline.png') repeat center;
+  background:$white /* url('../img/congruent_outline.png') repeat center*/;
+  border-bottom: 1px solid $medium-gray;
+  clip-path: polygon(0 0, 1600px 0, 1600px 87%, 0 100%);
+
 }
 hr {
   margin:0 auto;
@@ -117,7 +120,7 @@ hr {
     height: 70px;
   }
   .lduong {
-    fill: $white;
+    fill: $dark-gray;
   }
   .lduong:hover {
     fill: $brand-primary;
@@ -154,7 +157,7 @@ hr {
   padding-top: 6em;
   padding-bottom: 13em;
   @extend .text-center;
-  color: $white;
+  color: $black;
 }
 
 // Bio area
@@ -163,7 +166,16 @@ hr {
   /*background: #1b1b1b;
   color: #939393;*/
   @extend .padded;
-  @extend .text-center;
+  h2 {
+    &:after {
+      left: 5.5%;
+      margin-bottom: .35em;
+    }
+  }
+  i {
+    font-size: 240px;
+    display: block;
+  }
 }
 
 // Specialized
@@ -191,13 +203,14 @@ hr {
 #slogan {
   @extend .padded;
   @extend .text-center;
-  color: $white;
+  background: $white;
   h2 {
     line-height: 1em;
     letter-spacing: -1px;
     font-size: 30px;
     &:after {
-    background: $white;
+    background: $black;
+    height: 3px;
     }
   }
   @include breakpoint(large) {
@@ -219,20 +232,26 @@ hr {
 
 
 // Quote
-#quote .qod-text {
+#quote {
+  background: $white;
+  border-top: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
+  .qod-text {
     font-size: 2.4em;
     line-height: 1.2em;
     margin-bottom: 0;
-}
-#quote .qod-author {
-    font-size: 1.0em;
-    padding-top: 5px;
-    a {
-      color: $white;
-    }
-    a:hover {
-      color: darken($brand-primary, 10%);
-    }
+    color:$black;
+  }
+  .qod-author {
+      font-size: 1.0em;
+      padding-top: 5px;
+      a {
+        color: $black;
+      }
+      a:hover {
+        color: darken($brand-primary, 10%);
+      }
+  }
 }
 
 // Folio area
@@ -248,6 +267,18 @@ hr {
 // Social area
 #social {
   @extend .padded;
+  @extend .text-center;
+  .menu {
+    font-size: 30px;
+    margin-top:1em;
+    a {
+      color: $black;
+      @extend .smooth;
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+  }
 }
 
 // Capabilities
@@ -260,6 +291,29 @@ hr {
   }
   h2 {
     @extend .text-center;
+  }
+  .badge {
+    border-radius: 0;
+    margin-right: 1em;
+    position: relative;
+    top: -2px;
+    border: 1px solid $brand-primary;
+    &.E {
+      background-color: $brand-primary;
+      color: $white;
+    }
+    &.P {
+      background-color: lighten($brand-primary, 19%);
+      color: $white;
+    }
+    &.C {
+      background-color: lighten($brand-primary, 40%);
+      color:  $brand-primary;
+    }
+    &.N {
+      background-color: $white;
+      color: $brand-primary;
+    }
   }
 }
 
