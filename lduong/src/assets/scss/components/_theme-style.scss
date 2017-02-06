@@ -1,12 +1,12 @@
 // Theme global
 body {
-  background: #0d0d0d;
+  background: $black;
 }
 a, button, .lduong {
   @extend .smooth
 }
 .swapColorText {
-  color: $light-gray;
+  color: $brand-primary;
 }
 .swapColorBG {
   background: $dark-gray;
@@ -36,9 +36,8 @@ blockquote {
 }
 
 // Recycle area
-.padded {
-  padding-top: 6em;
-  padding-bottom: 8em;
+@mixin padding($padding) {
+  padding: $padding;
 }
 .smooth {
   -webkit-transition: all 500ms ease;
@@ -58,12 +57,11 @@ h1 {
     position: relative;
     width: 45px;
     height: 5px;
-    background: $black;
+    background: $brand-primary;
     left: 50%;
     margin: 21px 0 0 -22.5px;
   }
 }
-
 h2 {
   font-size: 50px;
   font-family: $body-font-family;
@@ -76,7 +74,7 @@ h2 {
     position: relative;
     width: 45px;
     height: 3px;
-    background: $black;
+    background: $brand-primary;
     left: 50%;
     margin: 13px 0 0 -22.5px;
   }
@@ -91,16 +89,68 @@ h5 {
     font-family: $body-font-family;
     text-transform: uppercase;
 }
+/* Reset
+*:before, *:after { content: ''; }
+hr {
+  border: 1px solid $light-gray;
+  margin: 0;
+  max-width: 100%;
+  background-position: 50%;
+  box-sizing: border-box;
+  background-color: $white;
+}*/
 hr {
   margin:0 auto;
-  max-width: 100%;
+  border-color: $black;
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  &:before {
+    content: '';
+    background: linear-gradient(to right, transparent, $light-gray, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+  }
+  &:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+
+    padding: 0 .5em;
+    line-height: 1.5em;
+    color: $black;
+    background-color: $white;
+    position: relative;
+    top: -17px;
+    font-size: 20px;
+  }
+  &.dark:before {
+    content: '';
+    background: linear-gradient(to right, transparent, $dark-gray, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+  }
 }
 
 
 // Nav area
 #identity {
-  padding-top: 20px;
-  background-color: transparent;
+  background-color: $white;
+  border-bottom: 1px solid $light-gray;
+	position: -webkit-sticky;
+  .top-bar {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   .top-bar,
   .top-bar ul {
     background-color: transparent;
@@ -109,8 +159,7 @@ hr {
     }
   }
   .logo {
-    width: 70px;
-    height: 70px;
+    width: 40px;
   }
   .lduong {
     fill: $dark-gray;
@@ -123,6 +172,15 @@ hr {
     float: none;
     .menu-icon {
       margin-top: 30px;
+      &:hover:after {
+        background: $black;
+        box-shadow: 0 7px 0 $black, 0 14px 0 $black;
+      }
+      &:after {
+        background: $brand-primary;
+        box-shadow: 0 7px 0 $brand-primary, 0 14px 0 $brand-primary;
+
+      }
     }
   }
   @include breakpoint(medium) {
@@ -131,7 +189,7 @@ hr {
       background: transparent;
     }
     .menu > li > a {
-      padding: 2.5rem 1rem
+      padding: 1.5rem 1rem
     }
 
     .top-bar-title {
@@ -144,50 +202,90 @@ hr {
   }
 
 }
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
+}
 
 // Hero area
-#hero {
-  color: $black;
-  background: url('../img/congruent_outline.png') repeat center $white;
-  border-bottom: 1px solid $medium-gray;
-  /*clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);*/
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+$size:    90px;
+#hero  {
   height: 100vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /*background-color: rgba(255, 255, 255, 1);*/
-  .logo-intro {
-    width: 100px;
-    height: 100px;
-  }
-  .lduong {
-    fill: $white;
-  }
+  background-color: $black;
+  text-align: center;
   h1 {
-      color: $white;
-      &:after {
-        background-color: $white;
-      }
-      &:first-child {
-      margin-top: .25em;
-      margin-bottom: -.15em;
-      padding-bottom: 0;
-      &:after {
-        height: 0;
-      }
+    color: $white;
+    &:after {
+      height: 5px;
+      left: 50%;
     }
   }
   h5 {
     color: $white;
   }
-
 }
+.valign {
+  display: inline-block;
+  @include vertical-align();
+}
+.logo-hero {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+.lduong {
+  fill: $white;
+}
+.scroll {
+  position: absolute;
+  left: 50%; bottom: 0;
+  height: 0; width: 0;
+
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;
+  border-bottom: $size/1.125 solid $white;
+  transform: translateX(-50%);
+
+  svg {
+    position: absolute;
+    top: $size/2;
+    left: 50%;
+    margin-top: -$size/9/2;
+    margin-left: -$size/3/2;
+    width: 2em;
+    fill:none;
+    stroke:$black;
+    stroke-width:4;
+    animation: bounce 2s ease infinite;
+  }
+}
+@keyframes bounce {
+  50% {
+    transform:
+      scale(.75)
+      translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 
 // Bio area
 #bio {
   @extend .whiteBG;
-  @extend .padded;
+  @include padding(6em 0 6em 0);
   h2 {
     &:after {
       left: 5.5%;
@@ -195,15 +293,21 @@ hr {
     }
   }
   i {
+    font-size: 120%;
+  }
+  .fi-torso {
     font-size: 240px;
     display: block;
   }
 }
+.biostick {
+  margin-top:65px;
+}
 
-// Specialized
-#specialized {
+// Specialities
+#specialities {
   @extend .text-center;
-  @extend .padded;
+  @include padding(6em 0 6em 0);
   @extend .whiteBG;
   .medium-4.columns {
     margin-top: 2em;
@@ -212,6 +316,9 @@ hr {
     margin-top: .5em;
     margin-bottom: 2em;
   }
+  h4 {
+    margin-top: .5em;
+  }
   h5 {
     text-transform: uppercase;
   }
@@ -219,15 +326,25 @@ hr {
     font-size: 80px;
     font-weight: lighter;
   }
+  svg {
+    width: 125px;
+    fill: $light-gray;
+  }
+  a {
+    margin-top: 3em;
+    text-transform: uppercase;
+  }
+
 }
 
 // Slogan area
 #slogan {
-  @extend .padded;
+  @include padding(5em 0 6em 0);
   @extend .text-center;
-  background: $white;
+  background: $black;
+  color: $white;
   h2 {
-    line-height: 1em;
+    /*line-height: 1em;*/
     letter-spacing: -1px;
     font-size: 2.4em;
     text-transform: inherit;
@@ -243,29 +360,19 @@ hr {
   }
 }
 
-// Service area
-#services {
-  background: $white;
-  @extend .padded;
-  @extend .text-center;
-  img {
-    padding-bottom: 2.5em;
-  }
-}
-
 
 // Quote
 #quote {
-  background: $white;
+  background: $black;
   border-top: 1px solid $light-gray;
   border-bottom: 1px solid $light-gray;
   font-weight: lighter;
-  @extend .padded;
+  @include padding(3em 0 2em 0);
   .qod-text {
     font-size: 2.4em;
     line-height: 1.2em;
     margin-bottom: 0;
-    color:$black;
+    color:$white;
   }
   .qod-author {
       font-size: 1.0em;
@@ -280,39 +387,26 @@ hr {
   }
 }
 
-// Folio area
-#folio {
+// Cases area
+#cases {
   background: $white;
-  padding-top: 55px;
+  @include padding(6em 0 0 0);
   @extend .text-center;
-  img {
-    padding-bottom: 20px;
+  .row {
+    padding-top: 4em;
+
+  }
+  h2:after {
+    margin: 13px 0 .65em -22.5px;
   }
 }
 
-// Social area
-#social {
-  @extend .padded;
-  @extend .text-center;
-  .menu {
-    font-size: 30px;
-    margin-top:1em;
-    a {
-      color: $black;
-      @extend .smooth;
-      &:hover {
-        color: $brand-primary;
-      }
-    }
-  }
-}
-
-// Capabilities
+// Abilities area
 #abilities {
   background: $white;
-  @extend .padded;
+  @include padding(6em 0 6em 0);
   > .row:first-child .row {
-      margin-top: 3em;
+      margin-top: 2em;
       margin-bottom: 3em;
   }
   h2 {
@@ -344,8 +438,8 @@ hr {
 }
 
 #awards {
-  @extend .whiteBG;
-  @extend .padded;
+  background: $white;
+  @include padding(6em 0 6em 0);
   h2 {
     &:after {
       left: 5.5%;
@@ -360,8 +454,42 @@ hr {
 
 // Footer area
 footer {
-  background: #0d0d0d;
-  color: $black;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  @include padding(2em 0 2em 0);
+  background: $black;
+  color: darken($light-gray, 30%);
+  font-size: 80%;
+  text-align: center;
+  .row:last-child {
+    margin-top: 3em;
+  }
+  a {
+    display: inline-block;
+    color: darken($light-gray, 30%);
+  }
+  .logo {
+    height: 3em;
+  }
+  .lduong {
+    fill: darken($light-gray, 30%);
+    &:hover {
+      fill: darken($brand-primary, 10%);
+    }
+  }
+  .menu {
+    margin-bottom: .5em;
+    font-size: 30px;
+    a {
+      color: $medium-gray;
+      @extend .smooth;
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+  }
+  .misc {
+    .links,
+    .copyright {
+      padding-top: .8em;
+    }
+  }
 }

@@ -56,11 +56,11 @@ $foundation-palette: (
   warning: #ffae00,
   alert: #cc4b37,
 );
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #303030;
-$white: #ffffff;
+$light-gray: #999999;
+$medium-gray: #42464a;
+$dark-gray: #2d3135;
+$black: #222228;
+$white: #f8f8f8;
 $body-background: $white;
 $body-font-color: $black;
 $body-font-family: Lato,'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
@@ -78,7 +78,7 @@ $print-transparent-backgrounds: true;
 
 // custom global
 $global-transition: all 0.25s ease-in;
-$brand-primary: #cc6030;
+$brand-primary: #ff8b00;
 $brand-secondary: ;
 
 // 2. Breakpoints
@@ -248,7 +248,7 @@ $breadcrumbs-item-slash: true;
 $button-padding: 0.85em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
-$button-background: $primary-color;
+$button-background: $brand-primary;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
 $button-color: $white;
 $button-color-alt: $black;
