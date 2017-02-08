@@ -34,6 +34,9 @@ blockquote {
     color: $white;
   }
 }
+.border {
+  border:1px solid $light-gray;
+}
 
 // Recycle area
 @mixin padding($padding) {
@@ -285,7 +288,7 @@ $size:    90px;
 // Bio area
 #bio {
   @extend .whiteBG;
-  @include padding(6em 0 6em 0);
+  @include padding(6em 0 0em 0);
   h2 {
     &:after {
       left: 5.5%;
@@ -298,6 +301,18 @@ $size:    90px;
   .fi-torso {
     font-size: 240px;
     display: block;
+  }
+}
+.bioSM {
+  background: $brand-primary;
+  @include padding(2em 0 2em 0);
+  .menu i {
+    font-size: 200%;
+    color: $white;
+    @extend .smooth;
+    &:hover {
+      color: darken($brand-primary, 10%);
+    }
   }
 }
 .biostick {
@@ -344,11 +359,11 @@ $size:    90px;
   background: $black;
   color: $white;
   h2 {
-    /*line-height: 1em;*/
     letter-spacing: -1px;
     font-size: 2.4em;
     text-transform: inherit;
     margin-bottom: -30px;
+    /*text-transform: uppercase;*/
     &:after {
     height: 0px;
     }
