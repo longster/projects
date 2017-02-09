@@ -153,12 +153,16 @@ hr {
   }
   .logo {
     width: 40px;
+    @extend .smooth;
+    &:hover {;
+      transform: scale(1.25,1.25);
+    }
   }
   .lduong {
     fill: $dark-gray;
   }
   .lduong:hover {
-    fill: $brand-primary;
+    fill: $brand-primary
   }
   .top-bar-title {
     display: block;
@@ -301,6 +305,33 @@ $size:    90px;
     font-size: 240px;
     display: block;
   }
+  img {
+    border: 5px solid $brand-primary;
+    /*border-radius: 50%;*/
+    height: 250px;
+    width: 250px;
+    margin: 10px auto;
+    background: url(/assets/img/bg-bio.png) repeat top left #1b1b1b;
+  }
+}
+.biobg {
+  border: 1px solid $light-gray;
+  border-radius: 1%;
+  @extend .text-center;
+  h6, li {
+    @extend .text-left;
+    margin: 0 10px;
+  }
+  h6{
+      padding-bottom: 7px;
+  }
+  li {
+    padding: 7px 0;
+    border-bottom: 1px solid $light-gray;
+    &:first-child {
+      border-top: 1px solid $light-gray;
+    }
+  }
 }
 .bioSM {
   background: $brand-primary;
@@ -309,9 +340,9 @@ $size:    90px;
     font-size: 200%;
     color: $white;
     @extend .smooth;
-    &:hover {
-      color: darken($brand-primary, 10%);
-    }
+  }
+  a:hover {
+    transform: scale(1.75,1.75);
   }
 }
 
@@ -374,9 +405,7 @@ $size:    90px;
 
 // Quote
 #quote {
-  background: $black;
-  border-top: 1px solid $light-gray;
-  border-bottom: 1px solid $light-gray;
+  background: $brand-primary;
   font-weight: lighter;
   @include padding(3em 0 2em 0);
   .qod-text {
@@ -390,10 +419,10 @@ $size:    90px;
       padding-top: 5px;
       @extend .text-right;
       a {
-        color: $brand-primary;
+        color: lighten($brand-primary, 30%);
       }
       a:hover {
-        color: darken($brand-primary, 10%);
+        color: darken($brand-primary, 20%);
       }
   }
 }
@@ -464,6 +493,14 @@ $size:    90px;
 }
 
 //Resume area
+#resume {
+  h5 {
+    text-transform: lowercase;
+  }
+  .slash {
+    color: $brand-primary;
+  }
+}
 
 //Contact area
 #contact {
@@ -486,11 +523,15 @@ footer {
   }
   .logo {
     height: 3em;
-  }
-  .lduong {
-    fill: darken($light-gray, 30%);
+    @extend .smooth;
     &:hover {
-      fill: darken($brand-primary, 10%);
+      transform: scale(1.25,1.25);
+    }
+    .lduong {
+      fill: darken($light-gray, 30%);
+      &:hover {
+        fill: darken($brand-primary, 10%);
+      }
     }
   }
   .menu {
@@ -501,6 +542,7 @@ footer {
       @extend .smooth;
       &:hover {
         color: $brand-primary;
+        transform: scale(1.75,1.75);
       }
     }
   }
