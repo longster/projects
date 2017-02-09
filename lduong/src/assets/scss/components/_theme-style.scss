@@ -1,9 +1,5 @@
 // Theme global
 html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
   background: $black;
 }
 a, button, .lduong {
@@ -180,13 +176,16 @@ hr {
       }
     }
   }
+  .title-bar-title {
+    padding-top:5px;
+  }
   @include breakpoint(medium) {
     .top-bar,
     .top-bar ul li {
       background: transparent;
     }
     .menu > li > a {
-      padding: 1.5rem 1rem
+      padding: 1.6rem 1rem
     }
 
     .top-bar-title {
@@ -206,6 +205,9 @@ hr {
   top: 0;
   z-index: 100;
   border-top: 0;
+}
+.sticky-hack {
+  margin-top:65px;
 }
 
 // Hero area
@@ -311,9 +313,6 @@ $size:    90px;
       color: darken($brand-primary, 10%);
     }
   }
-}
-.biostick {
-  margin-top:65px;
 }
 
 // Specialities

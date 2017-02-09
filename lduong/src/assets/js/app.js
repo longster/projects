@@ -12,10 +12,10 @@ $(document).ready(function() {
 	    // otherwise change it back to relative
 	    if (scrollTop > stickyNavTop) {
 	        $('#identity').addClass('sticky');
-          $('#bio').addClass('biostick');
+          $('#bio').addClass('sticky-hack');
 	    } else {
 	        $('#identity').removeClass('sticky');
-          $('#bio').removeClass('biostick');
+          $('#bio').removeClass('sticky-hack');
 	    }
 	};
 
