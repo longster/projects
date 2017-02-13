@@ -1,3 +1,27 @@
+// Custom variables
+@mixin padding($padding) {
+  padding: $padding;
+}
+@mixin backgrounds(){
+  background-attachment: fixed;
+  background-size: cover!important;
+  background-position: center;
+  background-blend-mode: screen;
+}
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+$size: 90px;
+%transition {
+  transition: all .25s;
+}
+
+
+
 // Theme global
 html, body {
   background: $white;
@@ -5,10 +29,10 @@ html, body {
 a, button, .lduong {
   @extend .smooth
 }
-.swapColorText {
+.varColorText {
   color: $brand-primary;
 }
-.swapColorBG {
+.varColorBG {
   background: $dark-gray;
   color: $white;
 }
@@ -37,11 +61,6 @@ blockquote {
 .border {
   border:1px solid $light-gray;
 }
-
-// Recycle area
-@mixin padding($padding) {
-  padding: $padding;
-}
 .smooth {
   -webkit-transition: all 500ms ease;
   -moz-transition: all 500ms ease;
@@ -49,14 +68,6 @@ blockquote {
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
 }
-@mixin backgrounds(){
-  background-attachment:fixed;
-  background-size:cover!important;
-  background-position:center;
-  background-blend-mode:screen;
-}
-
-
 h1 {
   font-size: 70px;
   line-height: .9em;
@@ -122,7 +133,6 @@ hr {
     content: attr(data-content);
     position: relative;
     display: inline-block;
-
     padding: 0 .5em;
     line-height: 1.5em;
     color: $black;
@@ -141,6 +151,7 @@ hr {
     height: 1px;
   }
 }
+
 
 
 // Nav area
@@ -219,16 +230,9 @@ hr {
   margin-top: 65px;
 }
 
-// Hero area
-@mixin vertical-align {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-$size:    90px;
 
+
+// Hero area
 #hero  {
   height: 100vh;
   //background-color: $black;
@@ -289,6 +293,10 @@ $size:    90px;
     transform: translateY(0);
   }
 }
+a#bio {
+  @extend %transition;
+}
+
 
 
 // Bio area
@@ -317,7 +325,6 @@ $size:    90px;
     background: url(/assets/img/bg-bio.png) repeat top left #1b1b1b;
   }
 }
-
 .gallup .card {
   border-radius: 1%;
   h6, li {
@@ -325,19 +332,19 @@ $size:    90px;
     margin-top: 0;
   }
   h6{
-      padding-bottom: 7px;
+      padding-bottom: .5rem;
+  }
+  ul {
+    margin-bottom: 0;
   }
   li {
-    padding: 7px 0;
+    padding: .5rem 0;
     border-top: 1px solid $light-gray;
-    &:last-child {
-      border-bottom: 1px solid $light-gray;
-    }
   }
 }
 .bioSM {
   background: $brand-primary;
-  @include padding(2em 0 2em 0);
+  @include padding(1em 0 1em 0);
   .menu i {
     font-size: 200%;
     color: $white;
@@ -347,6 +354,7 @@ $size:    90px;
     transform: scale(1.75,1.75);
   }
 }
+
 
 
 // Slogan area
@@ -422,7 +430,6 @@ $size:    90px;
 
 
 
-
 // Quote
 #quote {
   background: $brand-primary;
@@ -446,6 +453,7 @@ $size:    90px;
       }
   }
 }
+
 
 
 // Abilities area
@@ -484,6 +492,7 @@ $size:    90px;
 }
 
 
+
 //Awards area
 #awards {
   background: $white;
@@ -502,7 +511,7 @@ $size:    90px;
 
 
 
-//Resume area
+//Resume page
 #resume {
   @include padding(6em 0 6em 0);
   h5 {
@@ -514,14 +523,19 @@ $size:    90px;
 }
 
 
+
+//Portfolio page
 #portfolio {
   @include padding(6em 0 6em 0);
 }
 
-//Contact area
+
+
+//Contact page
 #contact {
   @include padding(6em 0 6em 0);
 }
+
 
 
 // Footer area
