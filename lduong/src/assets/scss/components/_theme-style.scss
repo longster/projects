@@ -1,6 +1,6 @@
 // Theme global
 html, body {
-  background: $black;
+  background: $white;
 }
 a, button, .lduong {
   @extend .smooth
@@ -12,7 +12,7 @@ a, button, .lduong {
   background: $dark-gray;
   color: $white;
 }
-.whiteBG {
+.varBG {
   background: $white;
 }
 ::-moz-selection {
@@ -49,6 +49,14 @@ blockquote {
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
 }
+@mixin backgrounds(){
+  background-attachment:fixed;
+  background-size:cover!important;
+  background-position:center;
+  background-blend-mode:screen;
+}
+
+
 h1 {
   font-size: 70px;
   line-height: .9em;
@@ -136,21 +144,9 @@ hr {
 
 
 // Nav area
-#identity {
+#navbar {
   background-color: $white;
   border-bottom: 1px solid $light-gray;
-	position: -webkit-sticky;
-  .top-bar {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  .top-bar,
-  .top-bar ul {
-    background-color: transparent;
-    li {
-      background: $white;
-    }
-  }
   .logo {
     width: 40px;
     @extend .smooth;
@@ -164,43 +160,52 @@ hr {
   .lduong:hover {
     fill: $brand-primary
   }
+}
+.top-bar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.top-bar,
+.top-bar ul {
+  background-color: transparent;
+  li {
+    background: $white;
+  }
+}
+.top-bar-title {
+  display: block;
+  float: none;
+  .menu-icon {
+    margin-top: 30px;
+    &:hover:after {
+      background: $black;
+      box-shadow: 0 7px 0 $black, 0 14px 0 $black;
+    }
+    &:after {
+      background: $brand-primary;
+      box-shadow: 0 7px 0 $brand-primary, 0 14px 0 $brand-primary;
+    }
+  }
+}
+.title-bar-title {
+  padding-top:5px;
+}
+@include breakpoint(medium) {
+  .top-bar,
+  .top-bar ul li {
+    background: transparent;
+  }
+  .menu > li > a {
+    padding: 1.6rem 1rem
+  }
+
   .top-bar-title {
-    display: block;
-    float: none;
+    display: inline-block;
+    float: left;
     .menu-icon {
-      margin-top: 30px;
-      &:hover:after {
-        background: $black;
-        box-shadow: 0 7px 0 $black, 0 14px 0 $black;
-      }
-      &:after {
-        background: $brand-primary;
-        box-shadow: 0 7px 0 $brand-primary, 0 14px 0 $brand-primary;
-
-      }
+      margin-top: inherit;;
     }
   }
-  .title-bar-title {
-    padding-top:5px;
-  }
-  @include breakpoint(medium) {
-    .top-bar,
-    .top-bar ul li {
-      background: transparent;
-    }
-    .menu > li > a {
-      padding: 1.6rem 1rem
-    }
-
-    .top-bar-title {
-      display: inline-block;
-      float: left;
-      .menu-icon {
-        margin-top: inherit;;
-      }
-    }
-  }
-
 }
 .sticky {
   position: fixed;
@@ -211,7 +216,7 @@ hr {
   border-top: 0;
 }
 .sticky-hack {
-  margin-top:65px;
+  margin-top: 65px;
 }
 
 // Hero area
@@ -223,10 +228,13 @@ hr {
     transform: translateY(-50%);
 }
 $size:    90px;
+
 #hero  {
   height: 100vh;
-  background-color: $black;
+  //background-color: $black;
   text-align: center;
+  @include backgrounds();
+  background-image:url('http://s8.postimg.org/lf2udl5np/4_Aihmii.jpg');
   h1 {
     color: $white;
     &:after {
@@ -254,12 +262,10 @@ $size:    90px;
   position: absolute;
   left: 50%; bottom: 0;
   height: 0; width: 0;
-
   border-left: $size solid transparent;
   border-right: $size solid transparent;
   border-bottom: $size/1.125 solid $white;
   transform: translateX(-50%);
-
   svg {
     position: absolute;
     top: $size/2;
@@ -287,7 +293,6 @@ $size:    90px;
 
 // Bio area
 #bio {
-  @extend .whiteBG;
   @include padding(6em 0 0em 0);
   h2 {
     &:after {
@@ -312,6 +317,7 @@ $size:    90px;
     background: url(/assets/img/bg-bio.png) repeat top left #1b1b1b;
   }
 }
+
 .gallup .card {
   border-radius: 1%;
   h6, li {
@@ -342,11 +348,36 @@ $size:    90px;
   }
 }
 
+
+// Slogan area
+#slogan {
+  @include padding(5em 0 6em 0);
+  @extend .text-center;
+  background: $black;
+  color: $white;
+  h2 {
+    letter-spacing: -1px;
+    font-size: 2.4em;
+    text-transform: inherit;
+    margin-bottom: -30px;
+    //text-transform: uppercase;
+    &:after {
+    height: 0px;
+    }
+  }
+  @include breakpoint(large) {
+    h2 {
+    font-size: 40px;
+    }
+  }
+}
+
+
+
 // Specialities
 #specialities {
   @extend .text-center;
   @include padding(6em 0 6em 0);
-  @extend .whiteBG;
   .medium-4.columns {
     margin-top: 2em;
   }
@@ -364,9 +395,8 @@ $size:    90px;
     font-size: 80px;
     font-weight: lighter;
   }
-  svg {
-    width: 125px;
-    fill: $light-gray;
+  img {
+    margin: 2rem 0 1rem 0;
   }
   a {
     margin-top: 3em;
@@ -375,28 +405,22 @@ $size:    90px;
 
 }
 
-// Slogan area
-#slogan {
-  @include padding(5em 0 6em 0);
+
+
+// Cases area
+#cases {
+  @include padding(6em 0 0 0);
   @extend .text-center;
-  background: $black;
-  color: $white;
-  h2 {
-    letter-spacing: -1px;
-    font-size: 2.4em;
-    text-transform: inherit;
-    margin-bottom: -30px;
-    /*text-transform: uppercase;*/
-    &:after {
-    height: 0px;
-    }
+  .row {
+    padding-top: 4em;
+
   }
-  @include breakpoint(large) {
-    h2 {
-    font-size: 40px;
-    }
+  h2:after {
+    margin: 13px 0 .65em -22.5px;
   }
 }
+
+
 
 
 // Quote
@@ -423,23 +447,9 @@ $size:    90px;
   }
 }
 
-// Cases area
-#cases {
-  background: $white;
-  @include padding(6em 0 0 0);
-  @extend .text-center;
-  .row {
-    padding-top: 4em;
-
-  }
-  h2:after {
-    margin: 13px 0 .65em -22.5px;
-  }
-}
 
 // Abilities area
 #abilities {
-  background: $white;
   @include padding(6em 0 6em 0);
   > .row:first-child .row {
       margin-top: 2em;
@@ -473,6 +483,8 @@ $size:    90px;
   }
 }
 
+
+//Awards area
 #awards {
   background: $white;
   @include padding(6em 0 6em 0);
@@ -488,8 +500,11 @@ $size:    90px;
   }
 }
 
+
+
 //Resume area
 #resume {
+  @include padding(6em 0 6em 0);
   h5 {
     text-transform: lowercase;
   }
@@ -498,10 +513,16 @@ $size:    90px;
   }
 }
 
+
+#portfolio {
+  @include padding(6em 0 6em 0);
+}
+
 //Contact area
 #contact {
   @include padding(6em 0 6em 0);
 }
+
 
 // Footer area
 footer {
