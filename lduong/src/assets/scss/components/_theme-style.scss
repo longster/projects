@@ -518,14 +518,38 @@ a#bio {
   h5 {
     text-transform: lowercase;
   }
-  .slash {
+}
+a.accordion-title {
+  padding: 0;
+  color: $black;
+  p {
+    margin-bottom: 0;
+  }
+  &:before {
+    top: 25%;
+    right: 0rem;
     color: $brand-primary;
   }
-  ul.accordian {
-    .accordion-title {
-      color: $black;
+  b {
+    color:$brand-primary;
+    @extend .smooth;
+    &:hover {
+      color: darken($brand-primary, 10%);
     }
   }
+  i {
+    font-style: normal;
+  }
+  .float-right {
+    padding-right: 1rem;
+  }
+}
+.accordion-item,
+.gap-bot {
+  margin-bottom: 1.6em;
+}
+.gap-top {
+  margin-top: 1.6em;
 }
 
 
