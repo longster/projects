@@ -27,7 +27,7 @@ $(document).ready(function() {
 
 
   // Anchor smooth scroll
-  $('a.scroll').click(function(e) {
+  $('a.scroll, .menu a, #navbar a, .misc a').click(function(e) {
     e.preventDefault();
     $('body, html').animate({
       scrollTop: $($.attr(this, 'href')).offset().top

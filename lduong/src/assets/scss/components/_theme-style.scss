@@ -151,6 +151,23 @@ hr {
     height: 1px;
   }
 }
+[type='text'], [type='password'],
+[type='date'], [type='datetime'],
+[type='datetime-local'], [type='month'],
+[type='week'], [type='email'],
+[type='number'], [type='search'],
+[type='tel'], [type='time'], [type='url'],
+[type='color'], textarea,
+[type='text']:focus, [type='password']:focus,
+[type='date']:focus, [type='datetime']:focus,
+[type='datetime-local']:focus, [type='month']:focus,
+[type='week']:focus, [type='email']:focus,
+[type='number']:focus, [type='search']:focus,
+[type='tel']:focus, [type='time']:focus,
+[type='url']:focus, [type='color']:focus,
+textarea:focus {
+  @extend .smooth;
+}
 
 
 
@@ -235,10 +252,10 @@ hr {
 // Hero area
 #hero  {
   height: 100vh;
-  //background-color: $black;
+  background-color: $black;
   text-align: center;
   @include backgrounds();
-  background-image:url('http://s8.postimg.org/lf2udl5np/4_Aihmii.jpg');
+  //background-image:url('http://s8.postimg.org/lf2udl5np/4_Aihmii.jpg');
   h1 {
     color: $white;
     &:after {
@@ -512,7 +529,7 @@ a#bio {
 
 
 
-//Resume page
+//Resume area
 #resume {
   @include padding(6em 0 6em 0);
   h5 {
@@ -554,16 +571,15 @@ a.accordion-title {
 
 
 
-//Portfolio page
-#portfolio {
-  @include padding(6em 0 6em 0);
-}
-
-
-
-//Contact page
+//Contact area
 #contact {
-  @include padding(6em 0 6em 0);
+  @include padding(6em 0 1em 0);
+  label {
+    text-align: left;
+  }
+  .row:first-child {
+    @include padding(2em 0 2em 0);
+  }
 }
 
 
@@ -575,7 +591,7 @@ footer {
   color: darken($light-gray, 30%);
   font-size: 80%;
   text-align: center;
-  .row:last-child {
+  .misc {
     margin-top: 3em;
   }
   a {
@@ -596,7 +612,7 @@ footer {
     }
   }
   .menu {
-    margin-bottom: .5em;
+    //margin-bottom: .5em;
     font-size: 30px;
     a {
       color: $medium-gray;
