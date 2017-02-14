@@ -521,6 +521,11 @@ a#bio {
   .slash {
     color: $brand-primary;
   }
+  ul.accordian {
+    .accordion-title {
+      color: $black;
+    }
+  }
 }
 
 
