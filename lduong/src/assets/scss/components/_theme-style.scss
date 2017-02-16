@@ -41,12 +41,12 @@ a, button, .lduong {
 }
 ::-moz-selection {
   background: $brand-primary;
-  color: #fff;
+  color: $white;
   text-shadow: none;
 }
 ::selection {
   background: $brand-primary;
-  color: #fff;
+  color: $white;
   text-shadow: none; }
 blockquote {
   margin-bottom: 0px;
@@ -89,7 +89,22 @@ h2 {
   font-family: $body-font-family;
   text-transform: uppercase;
   letter-spacing: -2px;
-  //font-weight: lighter;
+  &:after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 45px;
+    height: 5px;
+    background: $brand-primary;
+    left: 3%;
+    margin: 13px 0 .35em -22.5px;
+  }
+}
+h4 {
+  font-size: 30px;
+  font-family: $body-font-family;
+  text-transform: uppercase;
+  letter-spacing: -2px;
   &:after {
     content: '';
     display: block;
@@ -97,19 +112,17 @@ h2 {
     width: 45px;
     height: 3px;
     background: $brand-primary;
-    left: 3%;
-    margin: 13px 0 .35em -22.5px;
+    left: 50%;
+    margin: 13px 0 1.35em -22.5px;
   }
 }
-h3, h4 {
-  //font-weight: 100;
+h3, h4, h5, h6 {
   font-family: $body-font-family;
-  letter-spacing: -1px;
-  //text-transform: uppercase;
+  letter-spacing: -.015rem;
 }
-h5 {
-    font-family: $body-font-family;
-    //text-transform: uppercase;
+h6 {
+  font-size: 120%;
+  text-transform: uppercase;
 }
 hr {
   margin:0 auto;
@@ -135,11 +148,11 @@ hr {
     display: inline-block;
     padding: 0 .5em;
     line-height: 1;
-    color: $black;
+    color: $brand-primary;
     background-color: $white;
     position: relative;
     top: -17px;
-    font-size: 20px;
+    font-size: 30px;
   }
   &.dark:before {
     content: '';
@@ -310,30 +323,76 @@ textarea:focus {
     transform: translateY(0);
   }
 }
-a#bio {
+
+
+
+// Profile area
+/*a#profile {
   @extend %transition;
-}
-
-
-
-// Bio area
-#bio {
-  @include padding(6em 0 0em 0);
-
-
-  .fi-torso {
-    font-size: 240px;
+}*/
+#profile {
+  @include padding(6rem 0);
+  img.icon {
+    margin: 2rem auto 0 auto;
+    width: 100px;
     display: block;
   }
-  img {
-    border: 0px solid $brand-primary;
-    /*border-radius: 50%;
-    height: 250px;
-    width: 250px;*/
-    margin: 0 0 10px 0;
-    //background: url(/assets/img/bg-bio.png) repeat top left #1b1b1b;
+  h6 {
+    margin-top: 2rem;
+    text-transform: uppercase;
   }
 }
+
+//Resume area
+#resume {
+  @include padding(6rem 0);
+  hr {
+    @include padding(2rem 0);
+  }
+  b:before {
+    content:'// ';
+    color: $brand-primary;
+  }
+  .gap-bot > li {
+    margin-bottom: 1.6em;
+  }
+}
+a.accordion-title {
+  padding: 0;
+  color: $black;
+  p {
+    margin-bottom: 0;
+  }
+  &:before {
+    top: 13px;
+    right: 0rem;
+    color: $brand-primary;
+  }
+  b {
+    color:$black;
+    @extend .smooth;
+    &:hover {
+      color: darken($brand-primary, 10%);
+    }
+    &:before {
+      content:'// ';
+      color: $brand-primary;
+    }
+  }
+  .float-right {
+    padding-right: 1rem;
+  }
+}
+.accordion-item,
+.gap-bot {
+  margin-bottom: 1.6em;
+}
+.gap-top {
+  margin-top: 1.6em;
+}
+
+
+/*
 .gallup .card {
   border-radius: 1%;
   h6, li {
@@ -362,7 +421,7 @@ a#bio {
   a:hover {
     transform: scale(1.75,1.75);
   }
-}
+}*/
 
 
 
@@ -378,14 +437,22 @@ a#bio {
     text-transform: inherit;
     margin-bottom: -30px;
     line-height: 1.25;
+    font-weight: lighter;
     //text-transform: uppercase;
     &:after {
     height: 0px;
     }
   }
+  p {
+    font-weight: lighter;
+    margin-top: 2.75rem;
+  }
   @include breakpoint(large) {
     h2 {
-    font-size: 40px;
+    font-size: 425%;
+    }
+    p {
+      font-size: 200%;
     }
   }
 }
@@ -393,9 +460,9 @@ a#bio {
 
 
 // Specialities
-#specialities {
+/*#specialities {
   @extend .text-center;
-  @include padding(6em 0 6em 0);
+  @include padding(6em 0);
   .medium-4.columns {
     margin-top: 2em;
   }
@@ -421,20 +488,53 @@ a#bio {
     text-transform: uppercase;
   }
 
-}
+}*/
 
 
 
 // Cases area
-#cases {
-  @include padding(6em 0 0 0);
-  @extend .text-center;
+#projects {
+  @include padding(6em 0);
   .row {
     padding-top: 4em;
 
   }
   h2:after {
     margin: 13px 0 .65em -22.5px;
+  }
+}
+
+
+
+// Abilities area
+#abilities {
+  @include padding(6em 0);
+  > .row:first-child .row {
+      margin-top: 2em;
+      margin-bottom: 3em;
+  }
+  .badge {
+    border-radius: 0;
+    margin-right: 1em;
+    position: relative;
+    top: -2px;
+    border: 1px solid $brand-primary;
+    &.E {
+      background-color: $brand-primary;
+      color: $white;
+    }
+    &.P {
+      background-color: lighten($brand-primary, 19%);
+      color: $white;
+    }
+    &.C {
+      background-color: lighten($brand-primary, 40%);
+      color:  $brand-primary;
+    }
+    &.N {
+      background-color: $white;
+      color: $brand-primary;
+    }
   }
 }
 
@@ -466,94 +566,7 @@ a#bio {
 
 
 
-// Abilities area
-#abilities {
-  @include padding(6em 0 6em 0);
-  > .row:first-child .row {
-      margin-top: 2em;
-      margin-bottom: 3em;
-  }
-  h2 {
-    @extend .text-center;
-  }
-  .badge {
-    border-radius: 0;
-    margin-right: 1em;
-    position: relative;
-    top: -2px;
-    border: 1px solid $brand-primary;
-    &.E {
-      background-color: $brand-primary;
-      color: $white;
-    }
-    &.P {
-      background-color: lighten($brand-primary, 19%);
-      color: $white;
-    }
-    &.C {
-      background-color: lighten($brand-primary, 40%);
-      color:  $brand-primary;
-    }
-    &.N {
-      background-color: $white;
-      color: $brand-primary;
-    }
-  }
-}
 
-
-
-//Awards area
-#awards {
-  background: $white;
-  @include padding(6em 0 6em 0);
-  h2 {
-    &:after {
-      left: 5.5%;
-      margin-bottom: .35em;
-    }
-  }
-  i {
-    font-size: 240px;
-    display: block;
-  }
-}
-
-
-
-//Resume area
-a.accordion-title {
-  padding: 0;
-  color: $black;
-  p {
-    margin-bottom: 0;
-  }
-  &:before {
-    top: 25%;
-    right: 0rem;
-    color: $brand-primary;
-  }
-  b {
-    color:$brand-primary;
-    @extend .smooth;
-    &:hover {
-      color: darken($brand-primary, 10%);
-    }
-  }
-  i {
-    font-style: normal;
-  }
-  .float-right {
-    padding-right: 1rem;
-  }
-}
-.accordion-item,
-.gap-bot {
-  margin-bottom: 1.6em;
-}
-.gap-top {
-  margin-top: 1.6em;
-}
 
 
 
@@ -563,9 +576,9 @@ a.accordion-title {
   label {
     text-align: left;
   }
-  .row:first-child {
+  /*.row:first-child {
     @include padding(2em 0 2em 0);
-  }
+  }*/
 }
 
 
