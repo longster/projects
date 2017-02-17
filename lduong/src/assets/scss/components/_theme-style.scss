@@ -16,9 +16,9 @@
     transform: translateY(-50%);
 }
 $size: 90px;
-%transition {
+/*%transition {
   transition: all .25s;
-}
+}*/
 
 
 
@@ -218,7 +218,8 @@ textarea:focus {
   display: block;
   float: none;
   .menu-icon {
-    margin-top: 30px;
+    margin-top: 18px;
+    float: right;
     &:hover:after {
       background: $black;
       box-shadow: 0 7px 0 $black, 0 14px 0 $black;
@@ -233,7 +234,10 @@ textarea:focus {
   padding-top:5px;
   padding-left:7px;
 }
-@include breakpoint(medium) {
+#responsive-menu {
+  display: inline;
+}
+@include breakpoint(large) {
   .top-bar,
   .top-bar ul li {
     background: transparent;
@@ -244,9 +248,7 @@ textarea:focus {
 
   .top-bar-title {
     display: inline-block;
-    float: left;
     .menu-icon {
-      margin-top: inherit;;
     }
   }
 }
@@ -330,7 +332,7 @@ textarea:focus {
 
 // Profile area
 /*a#profile {
-  @extend %transition;
+//@extend %transition;
 }*/
 #profile {
   @include padding(6rem 0);
@@ -437,21 +439,21 @@ a.accordion-title {
     letter-spacing: -1px;
     font-size: 2.4em;
     text-transform: inherit;
-    margin-bottom: -30px;
+    margin-bottom: -5px;
     line-height: 1.25;
     font-weight: lighter;
-    //text-transform: uppercase;
     &:after {
     height: 0px;
     }
   }
   p {
     font-weight: lighter;
-    margin-top: 2.75rem;
+    //margin-top: 2.75rem;
   }
   @include breakpoint(large) {
     h2 {
     font-size: 425%;
+    margin-bottom: -10px;
     }
     p {
       font-size: 200%;
@@ -502,6 +504,9 @@ a.accordion-title {
   h2:after {
     margin: 13px 0 .65em -22.5px;
   }
+  img {
+    padding-bottom: 1rem;
+  }
 }
 
 
@@ -518,7 +523,12 @@ a.accordion-title {
       padding-bottom: 0;
 
     }
-    ul {padding-top: 0;}
+    ul {
+      padding-top: 0;
+    }
+    li:hover  {
+      background-color: lighten($light-gray, 35%);
+    }
   }
   /*
   > .row:first-child .row {
