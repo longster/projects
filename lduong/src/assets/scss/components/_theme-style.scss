@@ -463,39 +463,6 @@ a.accordion-title {
 
 
 
-// Specialities
-/*#specialities {
-  @extend .text-center;
-  @include padding(6em 0);
-  .medium-4.columns {
-    margin-top: 2em;
-  }
-  h3 {
-    margin-top: .5em;
-    margin-bottom: 2em;
-  }
-  h4 {
-    margin-top: .5em;
-  }
-  h5 {
-    text-transform: uppercase;
-  }
-  i {
-    font-size: 80px;
-    font-weight: lighter;
-  }
-  img {
-    margin: 2rem 0 1rem 0;
-  }
-  a {
-    margin-top: 3em;
-    text-transform: uppercase;
-  }
-
-}*/
-
-
-
 // Cases area
 #projects {
   @include padding(6rem 0);
@@ -504,8 +471,20 @@ a.accordion-title {
   h2:after {
     margin: 13px 0 .65em -22.5px;
   }
+  h5 {
+    margin-bottom: 1.5rem;
+  }
   img {
     padding-bottom: 1rem;
+  }
+  .row:last-child {
+    padding-top: 2rem;
+  }
+  .fade-in {
+    @include mui-fade(in, $duration: 1s);
+  }
+  .fade-out {
+    @include mui-fade(out, $duration: 1s);
   }
 }
 
@@ -526,38 +505,14 @@ a.accordion-title {
     ul {
       padding-top: 0;
     }
+    li img {
+      float: right;
+      margin-top: 3px;
+    }
     li:hover  {
       background-color: lighten($light-gray, 35%);
     }
   }
-  /*
-  > .row:first-child .row {
-      margin-top: 2em;
-      margin-bottom: 3em;
-  }
-  .badge {
-    border-radius: 0;
-    margin-right: 1em;
-    position: relative;
-    top: -2px;
-    border: 1px solid $brand-primary;
-    &.E {
-      background-color: $brand-primary;
-      color: $white;
-    }
-    &.P {
-      background-color: lighten($brand-primary, 19%);
-      color: $white;
-    }
-    &.C {
-      background-color: lighten($brand-primary, 40%);
-      color:  $brand-primary;
-    }
-    &.N {
-      background-color: $white;
-      color: $brand-primary;
-    }
-  }*/
 }
 
 
@@ -598,9 +553,6 @@ a.accordion-title {
   label {
     text-align: left;
   }
-  /*.row:first-child {
-    @include padding(2em 0 2em 0);
-  }*/
 }
 
 
