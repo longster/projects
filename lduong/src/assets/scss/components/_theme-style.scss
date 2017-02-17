@@ -496,8 +496,6 @@ a.accordion-title {
 #projects {
   @include padding(6em 0);
   .row {
-    padding-top: 4em;
-
   }
   h2:after {
     margin: 13px 0 .65em -22.5px;
@@ -508,7 +506,19 @@ a.accordion-title {
 
 // Abilities area
 #abilities {
-  @include padding(6em 0);
+  @include padding(6rem 0);
+  .row {
+    @include padding(1rem 0);
+    &:first-child {
+        padding-bottom: 0;
+    }
+    &:nth-child(3) {
+      padding-bottom: 0;
+
+    }
+    ul {padding-top: 0;}
+  }
+  /*
   > .row:first-child .row {
       margin-top: 2em;
       margin-bottom: 3em;
@@ -535,7 +545,7 @@ a.accordion-title {
       background-color: $white;
       color: $brand-primary;
     }
-  }
+  }*/
 }
 
 
