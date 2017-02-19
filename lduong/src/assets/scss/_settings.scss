@@ -503,7 +503,7 @@ $responsive-embed-ratios: (
 // 29. Reveal
 // ----------
 
-$reveal-background: $white;
+$reveal-background: darken($white,5%);
 $reveal-width: 600px;
 $reveal-max-width: $global-width;
 $reveal-padding: $global-padding;
