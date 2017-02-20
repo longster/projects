@@ -27,10 +27,13 @@ $(document).ready(function() {
 
   // collapse responsive-menu after clicking link when on responsive mode - http://stackoverflow.com/questions/18516696/how-can-i-close-the-foundation-topbar-menu-when-a-link-is-clicked
   $('#responsive-menu li a, .top-bar-title a').click(function() {
-    var width = Foundation.MediaQuery.current;
+    var foundationWidth = Foundation.MediaQuery.current;
 
-    if( width == 'small' || width == 'medium'){
+    if( foundationWidth == 'small' || 'medium'){
         $('#responsive-menu').css('display', 'none');
+    }
+    else {
+      return;
     }
   });
 
