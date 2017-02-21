@@ -383,7 +383,15 @@ textarea:focus {
   hr {
     @include padding(2rem 0);
   }
-
+  /*@include breakpoint(small only medium only) {
+    .large-3.columns p {
+      margin-bottom: 0;
+      margin-top: 1rem;
+    }
+  }*/
+  .large-3.columns p {
+    margin-bottom: 0;
+  }
   .key li {
     margin-bottom: 1rem;
     &:before {
