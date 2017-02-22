@@ -15,11 +15,6 @@
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-$size: 90px;
-/*%transition {
-  transition: all .25s;
-}*/
-
 
 
 // Theme global
@@ -106,6 +101,16 @@ h2 {
     background: $brand-primary;
     left: 3%;
     margin: 13px 0 .35em -22.5px;
+  }
+  @include breakpoint(small only) {
+    &:after {
+      margin-left: -7px;
+    }
+  }
+  @include breakpoint(medium only) {
+    &:after {
+      margin-left: -10px;
+    }
   }
 }
 h4 {
@@ -304,6 +309,8 @@ textarea:focus {
 .lduong {
   fill: $white;
 }
+
+$size: 90px;
 .scroll {
   position: absolute;
   left: 50%; bottom: 0;
@@ -474,7 +481,6 @@ b:before {
   }
   p {
     font-weight: lighter;
-    //margin-top: 2.75rem;
   }
   @include breakpoint(large) {
     h2 {
@@ -494,9 +500,6 @@ b:before {
   @include padding(6rem 0);
   .row {
   }
-  h2:after {
-    margin: 13px 0 .65em -22.5px;
-  }
   h5 {
     margin-bottom: 1.5rem;
   }
@@ -515,11 +518,16 @@ b:before {
   }
 }
 .close-button {
-  right: 2rem!important;
-  top: 1.5rem!important;
-  font-size: 2.5em;
+  position: fixed;
+  right: 2.25rem!important;
+  top: 2rem!important;
+  font-size: 1.5em;
+  border: 1px solid $brand-primary;
+  background-color: $white;
+  padding: .75rem 1rem;
+  color: $brand-primary;
   &:hover {
-    color: $brand-primary!important;
+    color: darken($brand-primary,10%)!important;
   }
 }
 
