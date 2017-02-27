@@ -110,11 +110,11 @@ $(document).ready(function() {
     // if we've scrolled more than the navigation, change its position to fixed to stick to top,
     // otherwise change it back to relative
     if (scrollTop > stickyNavTop) {
-        $('#navbar').addClass('sticky');
-        $('.sticksters').addClass('sticky-hack');
+        $('#navbar').addClass('tacky');
+        $('.sticksters').addClass('tacky-hack');
     } else {
-        $('#navbar').removeClass('sticky');
-        $('.sticksters').removeClass('sticky-hack');
+        $('#navbar').removeClass('tacky');
+        $('.sticksters').removeClass('tacky-hack');
     }
 	};
 
