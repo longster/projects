@@ -136,12 +136,7 @@ $(document).ready(function() {
     else {
       $('#responsive-menu').css('display', 'none');
     }
-
-    //if($(window).width() < 1024) {
-      //$('#responsive-menu').css('display', 'none');
-    //}
-
-
+    
   });
 
 
@@ -154,5 +149,5 @@ $(document).ready(function() {
   });
 
 
-  
+
 });

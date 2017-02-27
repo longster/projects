@@ -22,7 +22,7 @@ html, body {
   background: $white;
 }
 a, button, .lduong {
-  @extend .smooth
+  @extend .smooth;
 }
 .varColorText {
   color: $brand-primary;
@@ -202,6 +202,7 @@ textarea:focus {
 #navbar {
   background-color: $white;
   border-bottom: 1px solid $light-gray;
+  z-index: 5 !important;
   .logo {
     width: 40px;
     @extend .smooth;
@@ -213,7 +214,7 @@ textarea:focus {
     fill: $dark-gray;
   }
   .lduong:hover {
-    fill: $brand-primary
+    fill: $brand-primary;
   }
 }
 .top-bar {
@@ -256,13 +257,22 @@ textarea:focus {
     background: transparent;
   }
   .menu > li > a {
-    padding: 1.6rem 1rem
+    padding: 1.6rem 1rem;
   }
-
   .top-bar-title {
     display: inline-block;
     .menu-icon {
     }
+  }
+}
+@include breakpoint(small only) {
+  .menu > li > a {
+    padding: 0.7rem 0rem;
+  }
+}
+@include breakpoint(medium only) {
+  .menu > li > a {
+    padding: 0.7rem 0rem;
   }
 }
 .sticky {
@@ -270,7 +280,6 @@ textarea:focus {
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 100;
   border-top: 0;
 }
 .sticky-hack {
@@ -310,6 +319,60 @@ textarea:focus {
   fill: $white;
 }
 
+$strokeWidth: 4px;
+$strokeColor: white;
+
+$timing: 2.6s;
+// $easing: ease-in-out;
+$easing: cubic-bezier(0.77, 0, 0.175, 1);
+
+.scroll-down-dude {
+  margin-top: 20px;
+}
+.scroll-down-dude:before,
+.scroll-down-dude:after {
+	content: '';
+  display: block;
+	width: 12px;
+	height: 12px;
+	transform: rotate(45deg);
+	border-bottom: $strokeWidth solid $strokeColor;
+	border-right: $strokeWidth solid $strokeColor;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.scroll-down-dude:before {
+	animation: down-arrow-before $timing $easing infinite;
+}
+
+.scroll-down-dude:after {
+	animation: down-arrow-after $timing $easing infinite;
+}
+
+@keyframes down-arrow-before {
+	50% {
+		transform: rotate(45deg) translate(70%, 70%);
+	}
+	100% {
+		transform: rotate(45deg) translate(70%, 70%);
+	}
+}
+
+@keyframes down-arrow-after {
+	50% {
+		transform: rotate(45deg) translate(110%, 110%);
+		opacity: 0;
+	}
+	51% {
+		transform: rotate(45deg) translate(-130%, -130%);
+	}
+	100% {
+		transform: rotate(45deg) translate(-70%, -70%);
+		opacity: 1;
+	}
+}
+/*
 $size: 90px;
 .scroll {
   position: absolute;
@@ -342,13 +405,10 @@ $size: 90px;
     transform: translateY(0);
   }
 }
-
+*/
 
 
 // Profile area
-/*a#profile {
-//@extend %transition;
-}*/
 #profile {
   @include padding(6rem 0);
   img.icon {
@@ -642,7 +702,10 @@ footer {
   .misc {
     .links,
     .copyright {
-      padding-top: .8em;
+      padding: .8em 0;
+    }
+    p {
+      margin-bottom: 0;
     }
   }
 }
