@@ -338,8 +338,6 @@ textarea:focus {
   }
   .top-bar-title {
     display: inline-block;
-    .menu-icon {
-    }
   }
 }
 @include breakpoint(small only) {
@@ -580,8 +578,6 @@ b:before {
 // Projects area
 #projects {
   @include padding(6rem 0);
-  .row {
-  }
   h5 {
     margin-bottom: 1.5rem;
   }
