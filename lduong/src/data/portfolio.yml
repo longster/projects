@@ -1,4 +1,43 @@
-https://placehold.it/2000x750&amp;text=1st
-https://placehold.it/2000x750&amp;text=2nd
-https://placehold.it/2000x750&amp;text=3rd
-https://placehold.it/2000x750&amp;text=4th
+projects:
+  -
+    modal-id: modal1
+    image-url: 'assets/img/projects/thumb-marketing.png'
+    image-alt: Job Position Opening - Marketing Specialist
+    image-full: 'assets/img/projects/full-marketing.jpg'
+    source: 'http://jobs.cpanel.com/marketing.php'
+    cta: Visit cPanel Marketing Position
+  -
+    modal-id: modal2
+    image-url: 'assets/img/projects/thumb-cPanel.png'
+    image-alt: cPanel Website
+    image-full: 'assets/img/projects/full-cPanel.jpg'
+    source: 'http://cpanel.com'
+    cta: Visit cPanel Website
+  -
+    modal-id: modal3
+    image-url: 'assets/img/projects/thumb-cPstarter-light.png'
+    image-alt: cP Starter Light
+    image-full: 'assets/img/projects/full-cPstarter-light.png'
+    source: 'http://cpanel.com'
+    cta: Visit cP Starter Light
+  -
+    modal-id: modal4
+    image-url: 'assets/img/projects/thumb-cPstarter-dark.png'
+    image-alt: cP Starter Dark
+    image-full: 'assets/img/projects/full-cPstarter-dark.png'
+    source: 'http://cpanel.com'
+    cta: Visit cP Starter Dark
+  -
+    modal-id: modal5
+    image-url: 'assets/img/projects/thumb-58.png'
+    image-alt: cPanel Release 58
+    image-full: 'assets/img/projects/full-58.jpg'
+    source: 'http://cpanel.com'
+    cta: Visit cPanel Release 58
+  -
+    modal-id: modal6
+    image-url: 'assets/img/projects/thumb-conf14.png'
+    image-alt: cPanel Conference 14
+    image-full: 'assets/img/projects/full-conf14.jpg'
+    source: 'http://cpanel.com'
+    cta: Visit cPanel Conference 14

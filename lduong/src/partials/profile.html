@@ -77,13 +77,9 @@
     <div class="row text-center">
       <div class="medium-6 medium-centered columns">
         <ul class="menu expanded">
-          <li><a href="https://www.facebook.com/lduongh" target="_blank"><i class="fi-social-facebook"></i></a></li>
-          <li><a href="https://twitter.com/lduongh" target="_blank"><i class="fi-social-twitter"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/lduongh
-        " target="_blank"><i class="fi-social-linkedin"></i></a></li>
-          <li><a href="https://github.com/longster" target="_blank"><i class="fi-social-github"></i></a></li>
-          <li><a href="https://dribbble.com/longster" target="_blank"><i class="fi-social-dribbble"></i></a></li>
-          <li><a href="/contact/"><i class="fi-mail"></i></a></li>
+          {{#each global.social}}
+          <li><a href="{{link}}" target="_blank"><i class="fi-{{fi-icon}}"></i></a></li>
+          {{/each}}
         </ul>
       </div>
     </div>

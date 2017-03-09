@@ -1,0 +1,166 @@
+references:
+  -
+    name: Stephen Brent May
+    title: Product Owner
+  -
+    name: Barbara Aquino
+    title: Business Owner
+  -
+    name: Clarissa Marshal
+    title: Event Coordinator
+  -
+    name: JR Miller
+    title: Content Strategist
+  -
+    name: Oswaldo Rodriguez
+    title: Project Manager
+
+
+
+key-experience:
+  - Identify and understand business issues to provide effective solutions to solve key design challenges in existing user interface that focuses on maintaining internal and external business continuity and efficient functionality.
+  - Participate and collaborate with clients, software developers, project manager, and researchers to refine the user experience in concept development and detailed specification of visual designs for user interfaces.
+  - Optimize visual designs and user interface/form design to address business, brand, market and user requirements (including storyboard, prototype, design, and production of screen layouts, color palettes, typography, and interface elements).
+  - Develop and improve performance and scalability through clean and minified code.
+  - Execute, perform, and analyze qualitative  usability testing.
+  - Experience in Agile Development approach & Scrum management methodologies.
+  - Develop, execute, and maintain web applications and software test plans, designs, and cases.
+
+
+
+past-experience:
+  -
+    position: UX / UI Designer
+    time-frame: Jun 2011 - Present
+    company: cPanel, Inc
+    co-profile: Provide web hosting software that automates the intricate workings of web hosting servers.
+    duties: 
+      - Lead & collaborate usability research, information structure, wireframe prototype, design, develop, and maintain more than 15 websites and 2 software applications.
+      - Perform and analyze A/B Testing stats.
+      - Design, develop & assemble general user experience library to unify a consistent brand and improve how teams build experiences.
+      - Continually optimize and automate digital communication for both internal & external stakeholders.
+  -
+    position: Co-Founder
+    time-frame: Jan 2005 - Dec 2013
+    company: BE7A LLC
+    co-profile: A part time consultant and lead designer.
+    duties: 
+      - Led the creative vision, user experience, and web development. 
+      - Managed web development & architected website redesign in Wordpress. 
+      - Successfully built a community of thousands of unique visitors on a minimal budget. 
+      - Analyzed stats and optimized features for conversion and usability. 
+      - Catered to over 15 clients life-to-date.
+  -
+    position: UI/Web Developer
+    time-frame: Oct 2007 - Jun 2011
+    company: Lloyd’s Register Technical Services
+    co-profile: A risk-based asset management and task plan strategies.
+    duties: 
+      - Lead UI developer for Arivu & Arivu Modelor - an asset maintenance plan based on web application technology for Energy business sector.
+      - Develop, maintain, and improve   usability and accessibility of modules, administrative interface, and overall structure workflow.
+      - Developed and customized CSS templates framework to accomodate business’ brand.
+  -
+    position: UX Engineer
+    time-frame: Feb 2007 - Jul 2007
+    company: Ansh Labs LLC
+    co-profile: Medical Devices Industry
+    duties: 
+      - Researched, analyzed, and developed user experience design of medical devices software, instrumentation interfaces, web, and mobile application.
+      - Defined and improved information/visual architecture.
+  -
+    position: Web Designer
+    time-frame: Jul 2001 - Oct 2007
+    company: Beckman Coulter - Diagnostic Systems Labs
+    co-profile: A specialty technology for reproductive endocrinology and cardiovascular risk assessment.
+    duties: 
+      - Successfully implemented over 20 internet and email marketing campaigns.
+      - Managed $150,000 - $300,000 budget with over 20 publishers, 15 exhibit meetings, and 10 online advertising campaigns.
+      - Designed and distributed over 15,000 product catalogs and listings on yearly basis.
+      - Conceptualized and designed instrumentation and package design from initial stage to final products.
+      - Designed and improved software Graphic User Interface (GUI), web-based applications, component designs, site navigation, and keypad user interfaces.
+  -
+    position: Web Developer
+    time-frame: Jun 1999 - Jul 2001
+    company: MegaMania Interactive Inc.
+    co-profile: A web design services, ecommerce solutions, application development and hosting services provider.
+    duties: 
+      - Collaborated on developing, designing, improving, and hand-coding the infrastructure of 123city.net (geographic local search engine).
+      - Established, customized & implemented internet/intranet solutions on variety projects.
+      - Designed more than 25 web base templates, 30 banner/billboard ads, and 10 electronic animated greeting cards.
+  -
+    position: Graphic Designer
+    time-frame: Jun 1999 - Sept 1999
+    company: Houston Creative Connections (Known as Aquent)
+    co-profile: A professional services firm in helping companies to make use of people, processes, and tech more effectively.
+    duties: 
+      - Collaborative designs with Houston Chronicle.
+      - Fabricate and edit day-to-day layout design, direct mail, ad slicks, POS brochures and classified ads.
+      - Oversee CMYK correction and scanning.
+  -
+    position: Graphic Designer
+    time-frame: Jul 1997 - Jun 1999
+    company: Silver Express Fine Sterling Silver
+    co-profile: A manufacturer of sterling silver, stone and bead jewelry.
+    duties:
+      - Responsible for over $75,000-$150,000 budget related design project costs.
+      - Designed & published advertisements with over 15 jewelry publishers.
+      - Construct and manufactured any media form such as marketing presentation, catalogs, signing, ad slicks, direct mail, POS brochures, and classified ads.
+      - Research and develop product materials/coloration ranging from displays to card design.
+      - Designed & maintained cost efficient model for over 10 fixtures/displays and more than 20 cards through innovative design.
+      - Cultivate and improve logistic manufacturing and production’s process.
+
+
+
+education:
+  -
+    when: Sept 2016
+    event: Mozcon / Digital Marketing
+    where: Seatle, WA
+  -
+    when: Nov 2015
+    event: Future of Web Design
+    where: New York City, NY
+  -
+    when: Jan 2014
+    event: Agile Marketing Boot Camp
+    where: Washington, DC
+  -
+    when: Sept 2013
+    event: User Experience Training / Kelsey Ruger
+    where: Houston, TX
+  -
+    when: March 2010 & 2011
+    event: South by SouthWest Interactive (SXSWi)
+    where: Austin, TX
+  -
+    when: Oct 2008
+    event: User Interface Engineering (UIE) Conference
+    where: Boston, MA
+  -
+    when: May 1996
+    event: Bachelor of Fine Arts / Industrial Deign / RIT
+    where: Rochester, NY
+
+
+
+recognition:
+  -
+    when: June 2016
+    subject: 'Free cP Starter Style: Light & Dark cPanel UI Dashboard'
+    link: https://blog.cpanel.com/free-cp-starter-style/
+  -
+    when: Nov 2015
+    subject: AMA Crystal Awards
+    subject-list:
+      - 'Website B2B: In-House cPanel Website Redesign'
+      - 'Website: Most Improved - B2B cPanel.com'
+      - 'Microsite: In-House cPanel Conference 2015'
+      - 'Marketing Campaign: Small Budget cPanel Conference 2015'
+      - 'Single Event Promotion: B2B cPanel Conference 2015'
+    link: https://blog.cpanel.com/free-cp-starter-style/
+  -
+    when: Sept 2013
+    subject: 'cPanel Branding Basics: A Guide for Reseller Hosts'
+    link: https://blog.cpanel.com/cpanel-branding-basics-a-guide-for-reseller-hosts/
+
+

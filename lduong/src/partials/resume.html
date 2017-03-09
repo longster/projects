@@ -18,37 +18,20 @@
           <div class="large-3 columns show-for-large ref">
             <h6>References</h6>
             <ul class="no-bullet">
+              {{#each resume.references}} 
               <li class="gap-bot">
-                <b class="block">Stephen Brent May</b>Product Owner
+                <b class="block">{{name}}</b>{{title}}
               </li>
-              <li class="gap-bot">
-                <b class="block">Barbara Aquino</b>Business Owner
-              </li>
-              <li class="gap-bot">
-                <b class="block">Clarissa Marshal</b>Event Coordinator
-              </li>
-              <li class="gap-bot">
-                <b class="block">JR Miller</b>Content Strategist
-              </li>
-              <li class="gap-bot">
-                <b class="block">Joanna Miles</b>Marketing Specialist
-              </li>
-              <li class="gap-bot">
-                <b class="block">Oswald Rodriguez</b>Project Manager
-              </li>
+              {{/each}}
             </ul>
           </div>
 
           <div class="large-9 end columns key">
             <h6>Key Experiences</h6>
             <ul class="no-bullet">
-              <li>Identify and understand business issues to provide effective solutions to solve key design challenges in existing user interface that focuses on maintaining internal and external business continuity and efficient functionality.</li>
-              <li>Participate and collaborate with clients, software developers, project manager, and researchers to refine the user experience in concept development and detailed specification of visual designs for user interfaces.</li>
-              <li>Optimize visual designs and user interface/form design to address business, brand, market and user requirements (including storyboard, prototype, design, and production of screen layouts, color palettes, typography, and interface elements).</li>
-              <li>Develop and improve performance and scalability through clean and minified code.</li>
-              <li>Execute, perform, and analyze qualitative  usability testing.</li>
-              <li>Experience in Agile Development approach & Scrum management methodologies.</li>
-              <li>Develop, execute, and maintain web applications and software test plans, designs, and cases.</li>
+              {{#each resume.key-experience}} 
+              <li>{{this}}</li>
+              {{/each}}
             </ul>
           </div>
         </div>
@@ -70,41 +53,17 @@
       <div class="small-10 small-centered medium-8 medium-centered columns">
 
         <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
-          <li class="accordion-item is-active" data-accordion-item>
-            <a href="#" class="accordion-title">
-              <div class="row">
-                <div class="large-3 columns">
-                  <p><span class="block">UX / UI Designer </span>Jun 2011 - Present</p>
-                </div>
-                <div class="large-9 columns">
-                  <p><b>cPanel, Inc.</b></p>
-                  <p>Provide web hosting software that automates the intricate workings of web hosting servers.</p>
-                </div>
-              </div>
-            </a>
-            <div class="accordion-content" data-tab-content>
-              <div class="row">
-                <div class="large-9 large-offset-3 columns">
-                  <ul>
-                    <li>Lead & collaborate usability research, information structure, wireframe prototype, design, develop, and maintain more than 15 websites and 2 software applications.</li>
-                    <li>Perform and analyze A/B Testing stats.</li>  <li>Design, develop & assemble general user experience library to unify a consistent brand and improve how teams build experiences.</li>
-                    <li>Continually optimize and automate digital communication for both internal & external stakeholders.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
 
-
+          {{#each resume.past-experience}}
           <li class="accordion-item" data-accordion-item>
             <a href="#" class="accordion-title">
               <div class="row">
                 <div class="large-3 columns">
-                  <p><span class="block">Co-Founder </span>Jan 2005 - Dec 2013</p>
+                  <p><span class="block">{{position}} </span>{{time-frame}}</p>
                 </div>
                 <div class="large-9 columns">
-                  <p><b>BE7A LLC</b></p>
-                  <p>A part time consultant and lead designer.</p>
+                  <p><b>{{company}}</b></p>
+                  <p>{{co-profile}}</p>
                 </div>
               </div>
             </a>
@@ -112,184 +71,16 @@
               <div class="row">
                 <div class="large-9 large-offset-3 columns">
                   <ul>
-                    <li>Led the creative vision, user experience, and web development.</li>
-                    <li>Managed web development & architected website redesign in Wordpress.</li>
-                    <li>Successfully built a community of thousands of unique visitors on a minimal budget.</li>
-                    <li>Analyzed stats and optimized features for conversion and usability.</li>
-                    <li>Catered to over 15 clients life-to-date.</li>
+                    {{#each duties}}
+                    <li>{{this}}</li> 
+                    {{/each}}
                   </ul>
                 </div>
-              </div>
+              </div> 
             </div>
           </li>
-
-
-
-          <li class="accordion-item" data-accordion-item>
-            <a href="#" class="accordion-title">
-              <div class="row">
-                <div class="large-3 columns">
-                  <p><span class="block">UI/Web Developer</span>Oct 2007 - Jun 2011</p>
-                </div>
-                <div class="large-9 columns">
-                  <p><b>Lloyd’s Register Technical Services</b></p>
-                  <p>A risk-based asset management and task plan strategies.</p>
-                </div>
-              </div>
-            </a>
-            <div class="accordion-content" data-tab-content>
-              <div class="row">
-                <div class="large-9 large-offset-3 columns">
-                  <ul>
-                    <li>Lead UI developer for Arivu & Arivu Modelor - an asset maintenance plan based on web application technology for Energy business sector. </li>
-                    <li>Develop, maintain, and improve   usability and accessibility of modules, administrative interface, and overall structure workflow.</li>
-                    <li>Developed and customized CSS templates framework to accomodate business’ brand.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-
-
-
-          <li class="accordion-item" data-accordion-item>
-            <a href="#" class="accordion-title">
-              <div class="row">
-                <div class="large-3 columns">
-                  <p><span class="block">UX Engineer </span>Feb 2007 - Jul 2007</p>
-                </div>
-                <div class="large-9 columns">
-                  <p><b>Ansh Labs LLC</b></p>
-                  <p>Medical Devices Industry</p>
-                </div>
-              </div>
-            </a>
-            <div class="accordion-content" data-tab-content>
-              <div class="row">
-                <div class="large-9 large-offset-3 columns">
-                  <ul>
-                    <li>Researched, analyzed, and developed user experience design of medical devices software, instrumentation interfaces, web, and mobile application.</li>
-                    <li>Defined and improved information/visual architecture.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-
-
-
-          <li class="accordion-item" data-accordion-item>
-            <a href="#" class="accordion-title">
-              <div class="row">
-                <div class="large-3 columns">
-                  <p><span class="block">Web Designer </span>Jul 2001 - Oct 2007</p>
-                </div>
-                <div class="large-9 columns">
-                  <p><b>Beckman Coulter - Diagnostic Systems Labs</b></p>
-                  <p>A specialty technology for reproductive endocrinology and cardiovascular risk assessment.</p>
-                </div>
-              </div>
-            </a>
-            <div class="accordion-content" data-tab-content>
-              <div class="row">
-                <div class="large-9 large-offset-3 columns">
-                  <ul>
-                    <li>Successfully implemented over 20 internet and email marketing campaigns.</li>
-                    <li>Managed $150,000 - $300,000 budget with over 20 publishers, 15 exhibit meetings, and 10 online advertising campaigns.</li>
-                    <li>Designed and distributed over 15,000 product catalogs and listings on yearly basis.</li>
-                    <li>Conceptualized and designed instrumentation and package design from initial stage to final products.</li>
-                    <li>Designed and improved software Graphic User Interface (GUI), web-based applications, component designs, site navigation, and keypad user interfaces.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-
-
-
-          <li class="accordion-item" data-accordion-item>
-            <a href="#" class="accordion-title">
-              <div class="row">
-                <div class="large-3 columns">
-                  <p><span class="block">Web Developer </span>Jun 1999 - Jul 2001</p>
-                </div>
-                <div class="large-9 columns">
-                  <p><b>MegaMania Interactive Inc.</b></p>
-                  <p>A web design services, ecommerce solutions, application development and hosting services provider.</p>
-                </div>
-              </div>
-            </a>
-            <div class="accordion-content" data-tab-content>
-              <div class="row">
-                <div class="large-9 large-offset-3 columns">
-                  <ul>
-                    <li>Collaborated on developing, designing, improving, and hand-coding the infrastructure of 123city.net (geographic local search engine).</li>
-                    <li>Established, customized & implemented internet/intranet solutions on variety projects.</li>
-                    <li>Designed more than 25 web base templates, 30 banner/billboard ads, and 10 electronic animated greeting cards.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-
-
-
-          <li class="accordion-item" data-accordion-item>
-            <a href="#" class="accordion-title">
-              <div class="row">
-                <div class="large-3 columns">
-                  <p><span class="block">Graphic Designer </span>Jun 1999 - Sept 1999</p>
-                </div>
-                <div class="large-9 columns">
-                  <p><b>Houston Creative Connections (Known as Aquent)</b></p>
-                  <p>A professional services firm in helping companies to make use of people, processes, and tech more effectively.</p>
-                </div>
-              </div>
-            </a>
-            <div class="accordion-content" data-tab-content>
-              <div class="row">
-                <div class="large-9 large-offset-3 columns">
-                  <ul>
-                    <li>Collaborative designs with Houston Chronicle.</li>
-                    <li>Fabricate and edit day-to-day layout design: direct mail, ad slicks, POS brochures and classified ads.</li>
-                    <li>Oversee CMYK correction and scanning.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-
-
-
-          <li class="accordion-item" data-accordion-item>
-            <a href="#" class="accordion-title">
-              <div class="row">
-                <div class="large-3 columns">
-                  <p><span class="block">Graphic Designer </span>Jul 1997 - Jun 1999</p>
-                </div>
-                <div class="large-9 columns">
-                  <p><b>Silver Express Fine Sterling Silver</b></p>
-                  <p>A manufacturer of sterling silver, stone and bead jewelry.</p>
-                </div>
-              </div>
-            </a>
-            <div class="accordion-content" data-tab-content>
-              <div class="row">
-                <div class="large-9 large-offset-3 columns">
-                  <ul>
-                    <li>Responsible for over $75,000-$150,000 budget related design project costs.</li>
-                    <li>Designed & published advertisements with over 15 jewelry publishers.</li>
-                    <li>Construct and manufactured any media form such as marketing presentation, catalogs, signing, ad slicks, direct mail, POS brochures, and classified ads.</li>
-                    <li>Research and develop product materials/coloration ranging from displays to card design.</li>
-                    <li>Designed & maintained cost efficient model for over 10 fixtures/displays and more than 20 cards through innovative design.</li>
-                    <li>Cultivate and improve logistic manufacturing and production’s process.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
+          {{/each}}
         </ul>
-
 
       </div>
     </div>
@@ -309,69 +100,16 @@
             <h6>Conferences <span class="varColorText">+</span> Seminars <span class="varColorText">+</span> Education</h6>
           </div>
         </div>
-
+        {{#each resume.education}}
         <div class="row">
           <div class="large-3 columns">
-            <p>Sept 2016</p>
+            <p>{{when}}</p>
           </div>
           <div class="large-9 columns">
-            <p><b>Mozcon / Digital Marketing</b> - Seatle, WA</p>
+            <p><b>{{event}}</b> - {{where}}</p>
           </div>
         </div>
-
-        <div class="row">
-          <div class="large-3 columns">
-            <p>Nov 2015</p>
-          </div>
-          <div class="large-9 columns">
-            <p><b>Future of Web Design</b> - New York City, NY</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="large-3 columns">
-            <p>Jan 2014</p>
-          </div>
-          <div class="large-9 columns">
-            <p><b>Agile Marketing Boot Camp</b> - Washington, DC</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="large-3 columns">
-            <p>Sept 2013</p>
-          </div>
-          <div class="large-9 columns">
-            <p><b>User Experience Training / Kelsey Ruger</b> - Houston, TX</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="large-3 columns">
-            <p>March 2010 & 2011</p>
-          </div>
-          <div class="large-9 columns">
-            <p><b>South by SouthWest Interactive (SXSWi)</b> - Austin, TX</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="large-3 columns">
-            <p>Oct 2008</p>
-          </div>
-          <div class="large-9 columns">
-            <p><b>User Interface Engineering (UIE) Conference</b> - Boston, MA</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="large-3 columns">
-            <p>May 1996</p>
-          </div>
-          <div class="large-9 columns">
-            <p><b>Bachelor of Fine Arts / Industrial Deign / RIT</b> - Rochester, NY</p>
-          </div>
-        </div>
+        {{/each}}
 
       </div>
     </div>
@@ -392,39 +130,23 @@
           </div>
         </div>
 
+        {{#each resume.recognition}}
         <div class="row">
           <div class="large-3 columns">
-            <p>June 2016</p>
+            <p>{{when}}</p>
           </div>
           <div class="large-9 columns">
-            <p><b>Free cP Starter Style: Light & Dark cPanel UI Dashboard</b> / <a href="https://blog.cpanel.com/free-cp-starter-style/" target="_blank">Source article</a></p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="large-3 columns">
-            <p>Nov 2015</p>
-          </div>
-          <div class="large-9 columns">
-            <b>AMA Crystal Awards</b> / <a href="https://blog.cpanel.com/as-clear-as-crystal-award-winning-marketing/" target="_blank">Source article</a>
-            <ul class="no-bullet">
-              <li>Website B2B - In-House cPanel Website Redesign</li>
-              <li>Website: Most Improved - B2B cPanel.com</li>
-              <li>Microsite: In-House cPanel Conference 2015</li>
-              <li>Marketing Campaign: Small Budget cPanel Conference 2015</li>
-              <li>Single Event Promotion: B2B cPanel Conference 2015</li>
+            <p><b>{{subject}}</b> / <a href="{{link}}" target="_blank">Source article</a></p>
+            {{#if subject-list}}
+            <ul class="no-bullet gap-top-hack">
+              {{#each subject-list}}
+              <li>{{this}}</li>
+              {{/each}}
             </ul>
+            {{/if}}
           </div>
         </div>
-
-        <div class="row">
-          <div class="large-3 columns">
-            <p>Sept 2013</p>
-          </div>
-          <div class="large-9 columns">
-            <p><b>cPanel Branding Basics: A Guide for Reseller Hosts</b> / <a href="https://blog.cpanel.com/cpanel-branding-basics-a-guide-for-reseller-hosts/" target="_blank">Source article</a></p>
-          </div>
-        </div>
+        {{/each}}
 
         <div class="row gap-top">
           <div class="large-6 large-centered columns">

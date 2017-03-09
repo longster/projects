@@ -504,9 +504,11 @@ a.accordion-title {
     margin-bottom: 0;
   }
   &:before {
-    top: 13px;
+    top: 11px;
     right: 0rem;
-    color: $brand-primary;
+    padding: 2px 5px;
+    color: $white;
+    background-color: $brand-primary;
   }
   b {
     color:$black;
@@ -529,6 +531,9 @@ a.accordion-title {
 }
 .gap-top {
   margin-top: 1.6em;
+}
+.gap-top-hack {
+  margin-top:-1rem;
 }
 b:before {
   content:'// ';

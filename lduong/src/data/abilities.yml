@@ -1,0 +1,128 @@
+multidisiplinary:
+  -
+    skill: A/B Testing
+    rate-url: '4'
+  -
+    skill: Rapid Prototype
+    rate-url: '5'
+  -
+    skill: Grid Based Layout
+    rate-url: '5'
+  -
+    skill: Behavior Analysis
+    rate-url: '4'
+  -
+    skill: Responsive Design
+    rate-url: '5'
+  -
+    skill: Info Architecture
+    rate-url: '5'
+  -
+    skill: Wireframe
+    rate-url: '5'
+  -
+    skill: Digital Marketing
+    rate-url: '3'
+
+
+code:
+  -
+    skill: HTML5
+    rate-url: '4'
+  -
+    skill: CSS3
+    rate-url: '4'
+  -
+    skill: PHP
+    rate-url: '3'
+  -
+    skill: C Sharp
+    rate-url: '1'
+  -
+    skill: jQuery
+    rate-url: '3'
+  -
+    skill: Javascript
+    rate-url: '2'
+  -
+    skill: Scss/Sass
+    rate-url: '3'
+  -
+    skill: Less
+    rate-url: '3'
+  -
+    skill: NPM/NodeJS
+    rate-url: '2'
+  -
+    skill: Command Line
+    rate-url: '2'
+  -
+    skill: GulpJS/GruntJS
+    rate-url: '2'
+  -
+    skill: SQL Database
+    rate-url: '1'
+  -
+    skill: Wordpress
+    rate-url: '4'
+  -
+    skill: Bootstrap
+    rate-url: '5'
+  -
+    skill: Foundation
+    rate-url: '5'
+  -
+    skill: Jekyll Static Gen
+    rate-url: '4'
+    
+
+software:
+  -
+    skill: VS Code/Atom
+    rate-url: '4'
+  -
+    skill: Git/Github
+    rate-url: '3'
+  -
+    skill: MAMP/Xamp
+    rate-url: '3'
+  -
+    skill: Optimizely
+    rate-url: '4'
+  -
+    skill: Hotjar
+    rate-url: '4'
+  -
+    skill: UserTesting
+    rate-url: '3'
+  -
+    skill: Google Analytics
+    rate-url: '4'
+  -
+    skill: Photoshop
+    rate-url: '4'
+  -
+    skill: Illustrator
+    rate-url: '4'
+  -
+    skill: Experience Design
+    rate-url: '4'
+  -
+    skill: Indesign
+    rate-url: '3'
+  -
+    skill: Fireworks
+    rate-url: '4'
+  -
+    skill: SimplyCast
+    rate-url: '3'
+  -
+    skill: SurveyGizmo
+    rate-url: '3'
+  -
+    skill: MS Office
+    rate-url: '3'
+  -
+    skill: Apple iWorks
+    rate-url: '3'
+

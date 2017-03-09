@@ -24,11 +24,9 @@
       <div id="responsive-menu">
         <div class="top-bar-right">
           <ul class="vertical large-horizontal menu">
-            <li><a href="#profile">Profile</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#abilities">Abilities</a></li>
-            <li><a href="#contact">Contact</a></li>
+            {{#each global.nav}} 
+            <li><a href="{{link}}">{{text}}</a></li>
+            {{/each}}
           </ul>
         </div>
       </div>
@@ -63,11 +61,9 @@
       <div id="responsive-menu">
         <div class="top-bar-right">
           <ul class="vertical large-horizontal menu">
-            <li><a href="#profile">Profile</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#abilities">Abilities</a></li>
-            <li><a href="#contact">Contact</a></li>
+            {{#each global.nav}} 
+            <li><a href="{{link}}">{{text}}</a></li>
+            {{/each}}
           </ul>
         </div>
       </div>
