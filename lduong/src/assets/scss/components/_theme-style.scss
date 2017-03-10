@@ -197,12 +197,12 @@ textarea:focus {
 }
 
 
-/*
+
 // Nav alternative
 #navbar-alt {
   background-color: $white;
   border-bottom: 1px solid $light-gray;
-.logo {
+  .logo {
     width: 40px;
     @extend .smooth;
     &:hover {
@@ -215,7 +215,14 @@ textarea:focus {
   .lduong:hover {
     fill: $brand-primary;
   }
-}.top-bar {
+}
+
+.is-at-top.is-stuck {
+  width: 100%;
+  margin-top: 0em !important;
+}
+
+.top-bar {
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -259,8 +266,6 @@ textarea:focus {
   }
   .top-bar-title {
     display: inline-block;
-    .menu-icon {
-    }
   }
 }
 @include breakpoint(small only) {
@@ -273,8 +278,8 @@ textarea:focus {
     padding: 0.7rem 0rem;
   }
 }
-*/
 
+/*
 // Nav area
 #navbar {
   background-color: $white;
@@ -360,7 +365,7 @@ textarea:focus {
 .tacky-hack {
   margin-top: 65px;
 }
-
+*/
 
 
 // Hero area
@@ -602,8 +607,8 @@ b:before {
 }
 .close-button {
   position: fixed;
-  right: 2.25rem!important;
-  top: 2rem!important;
+  right: 2.25rem !important;
+  top: 5.25rem !important;
   font-size: 1.5em;
   border: 1px solid $brand-primary;
   background-color: $white;
