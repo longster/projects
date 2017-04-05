@@ -198,12 +198,16 @@ textarea:focus {
 
 
 // Nav area
+[data-sticky] {
+  width: 100%;
+}
 #navbar {
   background-color: $white;
   border-bottom: 1px solid $light-gray;
-  z-index: 5 !important;
   .logo {
     width: 40px;
+    display: inline-block;
+    margin: 5px 0 0 7px;
     @extend .smooth;
     &:hover {
       transform: scale(1.25,1.25);
@@ -227,140 +231,28 @@ textarea:focus {
     background: $white;
   }
 }
-.top-bar-title {
-  display: block;
-  float: none;
-  .menu-icon {
+.menu-icon {
     margin-top: 18px;
     float: right;
     &:hover:after {
-      background: $black;
-      box-shadow: 0 7px 0 $black, 0 14px 0 $black;
+        background: $black;
+        box-shadow: 0 7px 0 $black, 0 14px 0 $black;
     }
     &:after {
-      background: $brand-primary;
-      box-shadow: 0 7px 0 $brand-primary, 0 14px 0 $brand-primary;
+        background: $brand-primary;
+        box-shadow: 0 7px 0 $brand-primary, 0 14px 0 $brand-primary;
     }
-  }
-}
-.title-bar-title {
-  padding-top:5px;
-  padding-left:7px;
-}
-#responsive-menu {
-  display: inline;
 }
 @include breakpoint(large) {
-  .top-bar,
-  .top-bar ul li {
-    background: transparent;
-  }
   .menu > li > a {
     padding: 1.6rem 1rem;
   }
-  .top-bar-title {
-    display: inline-block;
+}
+@include breakpoint(medium down) {
+  .top-bar-title,
+  .top-bar .top-bar-right {
+    width:100%;
   }
-}
-@include breakpoint(small only) {
-  .menu > li > a {
-    padding: 0.7rem 0rem;
-  }
-}
-@include breakpoint(medium only) {
-  .menu > li > a {
-    padding: 0.7rem 0rem;
-  }
-}
-.tacky {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 0;
-  border-top: 0;
-}
-.tacky-hack {
-  margin-top: 65px;
-}
-
-
-
-// Nav Alt
-#navbar-alt {
-  background-color: $white;
-  border-bottom: 1px solid $light-gray;
-  .logo {
-    width: 40px;
-    @extend .smooth;
-    &:hover {
-      transform: scale(1.25,1.25);
-    }
-  }
-  .lduong {
-    fill: $dark-gray;
-  }
-  .lduong:hover {
-    fill: $brand-primary;
-  }
-}
-
-.is-at-top.is-stuck {
-  width: 100%;
-  margin-top: 0em !important;
-}
-
-.top-bar {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-.top-bar,
-.top-bar ul {
-  background-color: transparent;
-  li {
-    background: $white;
-  }
-}
-.top-bar-title {
-  display: block;
-  float: none;
-  .menu-icon {
-    margin-top: 18px;
-    float: right;
-    &:hover:after {
-      background: $black;
-      box-shadow: 0 7px 0 $black, 0 14px 0 $black;
-    }
-    &:after {
-      background: $brand-primary;
-      box-shadow: 0 7px 0 $brand-primary, 0 14px 0 $brand-primary;
-    }
-  }
-}
-.title-bar-title {
-  padding-top:5px;
-  padding-left:7px;
-}
-#responsive-menu {
-  display: inline;
-}
-@include breakpoint(large) {
-  .top-bar,
-  .top-bar ul li {
-    background: transparent;
-  }
-  .menu > li > a {
-    padding: 1.6rem 1rem;
-  }
-  .top-bar-title {
-    display: inline-block;
-  }
-}
-@include breakpoint(small only) {
-  .menu > li > a {
-    padding: 0.7rem 0rem;
-  }
-}
-@include breakpoint(medium only) {
   .menu > li > a {
     padding: 0.7rem 0rem;
   }
@@ -608,7 +500,7 @@ b:before {
 .close-button {
   position: fixed;
   right: 2.25rem !important;
-  top: 5.25rem !important;
+  top: 2.25rem !important;
   font-size: 1.5em;
   border: 1px solid $brand-primary;
   background-color: $white;
@@ -617,6 +509,9 @@ b:before {
   &:hover {
     color: darken($brand-primary,10%)!important;
   }
+}
+.reveal.full {
+  top: 0px !important;
 }
 
 
