@@ -30,7 +30,7 @@ key-experience:
 
 past-experience:
   -
-    position: UX / UI Designer
+    position: UX/UI Designer
     time-frame: Jun 2011 - Present
     company: cPanel, Inc
     co-profile: Provide web hosting software that automates the intricate workings of web hosting servers.
@@ -100,7 +100,7 @@ past-experience:
     position: Graphic Designer
     time-frame: Jul 1997 - Jun 1999
     company: Silver Express Fine Sterling Silver
-    co-profile: A manufacturer of sterling silver, stone and bead jewelry.
+    co-profile: A manufacturer of sterling silver, stone, and bead jewelry.
     duties:
       - Responsible for over $75,000-$150,000 budget related design project costs.
       - Designed & published advertisements with over 15 jewelry publishers.
@@ -115,7 +115,7 @@ education:
   -
     when: Sept 2016
     event: Mozcon / Digital Marketing
-    where: Seatle, WA
+    where: Seattle, WA
   -
     when: Nov 2015
     event: Future of Web Design
@@ -138,7 +138,7 @@ education:
     where: Boston, MA
   -
     when: May 1996
-    event: Bachelor of Fine Arts / Industrial Deign / RIT
+    event: Bachelor of Fine Arts / Industrial Design / RIT
     where: Rochester, NY
 
 
