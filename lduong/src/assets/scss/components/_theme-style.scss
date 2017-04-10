@@ -367,12 +367,6 @@ $easing: cubic-bezier(0.77, 0, 0.175, 1);
   hr {
     @include padding(2rem 0);
   }
-  /*@include breakpoint(small only medium only) {
-    .large-3.columns p {
-      margin-bottom: 0;
-      margin-top: 1rem;
-    }
-  }*/
   .large-3.columns p {
     margin-bottom: 0;
   }
