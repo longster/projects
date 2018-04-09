@@ -27,8 +27,7 @@ $(document).ready(function() {
   });
 
 
-
-
+  
   // Alt-Hero Background Stuff
   // Credit goes to https://codepen.io/MarcoGuglielmelli/pen/lLCxy
   (function () {
