@@ -314,7 +314,9 @@ textarea:focus {
   text-align: center;
   @include backgrounds();
   //background-image:url('http://s8.postimg.org/lf2udl5np/4_Aihmii.jpg');
- 	background-image: url('https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg');
+  
+  //Space background image credit goes to https://codepen.io/MarcoGuglielmelli/pen/lLCxy 
+  background-image: url('https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg');
 
   h1 {
     color: $white;
