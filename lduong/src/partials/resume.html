@@ -107,6 +107,13 @@
           </div>
           <div class="large-9 columns">
             <p><b>{{event}}</b> - {{where}}</p>
+             {{#if event-list}}
+            <ul class="gap-top-hack">
+              {{#each event-list}}
+              <li>{{this}}</li>
+              {{/each}}
+            </ul>
+            {{/if}}
           </div>
         </div>
         {{/each}}
@@ -138,7 +145,7 @@
           <div class="large-9 columns">
             <p><b>{{subject}}</b> / <a href="{{link}}" target="_blank">Source article</a></p>
             {{#if subject-list}}
-            <ul class="no-bullet gap-top-hack">
+            <ul class="gap-top-hack">
               {{#each subject-list}}
               <li>{{this}}</li>
               {{/each}}
@@ -148,7 +155,7 @@
         </div>
         {{/each}}
 
-        <div class="row gap-top">
+        <div class="row gap-top hide">
           <div class="large-6 large-centered columns">
             <a href="{{root}}assets/docs/lduong-resume-2017.pdf" class="button large expanded"><i class="fi-download"></i> Download Resume</a>
           </div>

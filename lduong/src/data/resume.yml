@@ -113,6 +113,15 @@ past-experience:
 
 education:
   -
+    when: March 2018
+    event: NNGroup UX Conference / Certification Credits
+    where: Los Angles, CA
+    event-list: 
+    - 'User Interface Principles Every Designer Must Know'
+    - 'Measuring User Experience'
+    - 'Analytics and User Experience'
+    - 'The Human Mind and Usability'
+  -
     when: Sept 2016
     event: Mozcon / Digital Marketing
     where: Seattle, WA
