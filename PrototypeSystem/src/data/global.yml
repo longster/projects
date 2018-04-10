@@ -10,7 +10,7 @@ nav:
 nav-left:
   - 
     link: 'http://lduong.com'
-    text: Arthur
+    text: Authur
   -
-    link: 'about.html'
-    text: About
+    link: 'contact.html'
+    text: Contact
