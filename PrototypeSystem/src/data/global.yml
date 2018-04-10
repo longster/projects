@@ -1,4 +1,9 @@
 nav:
+  - 
+    link: 'http://lduong.com'
+    text: Long Duong
+
+nav-left:
   -
     link: 'styleguide.html'
     text: Styleguide
@@ -6,11 +11,3 @@ nav:
     link: 'https://foundation.zurb.com/sites/docs/'
     text: Zurb Foundation
     target: _blank
-
-nav-left:
-  - 
-    link: 'http://lduong.com'
-    text: Authur
-  -
-    link: 'contact.html'
-    text: Contact
