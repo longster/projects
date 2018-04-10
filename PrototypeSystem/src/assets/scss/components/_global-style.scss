@@ -1,0 +1,74 @@
+// Custom reusable variables
+@mixin padding($padding) {
+  padding: $padding;
+}
+@mixin backgrounds(){
+  background-attachment: fixed;
+  background-size: cover!important;
+  background-position: center;
+  background-blend-mode: screen;
+}
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+$global-transition: all 0.25s ease-in;
+
+// color variables
+$brand-primary: #ff8b00;
+
+
+// Theme global
+html, body {
+  background: $white;
+}
+a, button {
+  @extend .smooth;
+}
+.varColorText {
+  color: $brand-primary;
+}
+.varDarkBG {
+  background: $dark-gray;
+  color: $white;
+}
+.varLightBG {
+  background: $white;
+}
+::-moz-selection {
+  background: $brand-primary;
+  color: $white;
+  text-shadow: none;
+}
+::selection {
+  background: $brand-primary;
+  color: $white;
+  text-shadow: none; }
+:focus {
+  outline: -webkit-focus-ring-color
+  auto 5px;
+  outline-color: $brand-primary;
+}
+blockquote {
+  margin-bottom: 0px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: $white;
+  border-left: 0;
+  p {
+    color: $white;
+  }
+}
+.border {
+  border:1px solid $light-gray;
+}
+.smooth {
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}

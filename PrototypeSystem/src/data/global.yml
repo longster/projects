@@ -1,15 +1,16 @@
 nav:
   -
-    link: 'page 1'
-    text: Page 1
+    link: 'styleguide.html'
+    text: Styleguide
   -
-    link: 'page 2'
-    text: Page 2
+    link: 'https://foundation.zurb.com/sites/docs/'
+    text: Zurb Foundation
+    target: _blank
 
 nav-left:
   - 
+    link: 'http://lduong.com'
+    text: Arthur
+  -
     link: 'about.html'
     text: About
-  -
-    link: 'misc.html'
-    text: Misc

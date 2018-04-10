@@ -15,7 +15,7 @@
             </li> 
             {{#each global.nav-left}}
             <li>
-                <a href="{{root}}{{link}}">{{text}}</a>
+                <a href="{{root}}{{link}}" {{#if target}}target={{target}}{{/if}}>{{text}}</a>
             </li> 
             {{/each}}
         </ul>
@@ -24,7 +24,7 @@
         <ul class="menu vertical medium-horizontal">
             {{#each global.nav}}
             <li>
-                <a href="{{root}}{{link}}">{{text}}</a>
+                <a href="{{root}}{{link}}" {{#if target}}target={{target}}{{/if}}>{{text}}</a>
             </li>
             {{/each}}
         </ul>

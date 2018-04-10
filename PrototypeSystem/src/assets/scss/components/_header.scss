@@ -1,0 +1,11 @@
+// Header area
+.hero {
+    height: 300px;
+    background-color: $brand-primary;
+    color: $white;
+    margin-bottom: 3em;
+    h1 {
+        font-size: 6em;
+        font-weight: 700;
+    }
+}
