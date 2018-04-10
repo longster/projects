@@ -1,0 +1,15 @@
+nav:
+  -
+    link: 'page 1'
+    text: Page 1
+  -
+    link: 'page 2'
+    text: Page 2
+
+nav-left:
+  - 
+    link: 'about.html'
+    text: About
+  -
+    link: 'misc.html'
+    text: Misc

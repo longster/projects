@@ -1,0 +1,32 @@
+<div class="title-bar" data-responsive-toggle="mainNavigation" data-hide-for="medium">
+    <div class="title-bar-left">
+        <button class="menu-icon" type="button" data-toggle="mainNavigation"></button>
+        <div class="title-bar-title">Menu</div>
+    </div>
+    <div class="title-bar-right">
+        UX/UI Guideline
+    </div>
+</div>
+<div class="top-bar" id="mainNavigation">
+    <div class="top-bar-left">
+        <ul class="menu vertical medium-horizontal">
+            <li class="menu-text hide-for-small-only">
+                UX/UI Guideline
+            </li> 
+            {{#each global.nav-left}}
+            <li>
+                <a href="{{root}}{{link}}">{{text}}</a>
+            </li> 
+            {{/each}}
+        </ul>
+    </div>
+    <div class="top-bar-right">
+        <ul class="menu vertical medium-horizontal">
+            {{#each global.nav}}
+            <li>
+                <a href="{{root}}{{link}}">{{text}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
