@@ -272,8 +272,8 @@ textarea:focus {
 	z-index: 1;
 }
 
-#large-header {
-	background-image: url('https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg');
+#large-header { //https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg
+	background-image: url('/assets/img/bg-triangles.png');
 }
 
 .main-title {
@@ -316,7 +316,7 @@ textarea:focus {
   //background-image:url('http://s8.postimg.org/lf2udl5np/4_Aihmii.jpg');
   
   //Space background image credit goes to https://codepen.io/MarcoGuglielmelli/pen/lLCxy 
-  background-image: url('https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg');
+  background-image: url('/assets/img/bg-triangles.png');
 
   h1 {
     color: $white;

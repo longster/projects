@@ -113,7 +113,7 @@ past-experience:
 
 education:
   -
-    when: March 2018
+    when: Mar 2018
     event: NNGroup UX Conference / Certification Credits
     where: Los Angles, CA
     event-list: 
@@ -121,6 +121,10 @@ education:
     - 'Measuring User Experience'
     - 'Analytics and User Experience'
     - 'The Human Mind and Usability'
+  -
+    when: Jun 2017
+    event: Financial Forecasting / American Management Association
+    where: Chicago, IL
   -
     when: Sept 2016
     event: Mozcon / Digital Marketing
@@ -154,7 +158,7 @@ education:
 
 recognition:
   -
-    when: June 2016
+    when: Jun 2016
     subject: 'Free cP Starter Style: Light & Dark cPanel UI Dashboard'
     link: https://blog.cpanel.com/free-cp-starter-style/
   -
@@ -166,7 +170,7 @@ recognition:
       - 'Microsite: In-House cPanel Conference 2015'
       - 'Marketing Campaign: Small Budget cPanel Conference 2015'
       - 'Single Event Promotion: B2B cPanel Conference 2015'
-    link: https://blog.cpanel.com/free-cp-starter-style/
+    link: https://blog.cpanel.com/as-clear-as-crystal-award-winning-marketing/
   -
     when: Sept 2013
     subject: 'cPanel Branding Basics: A Guide for Reseller Hosts'

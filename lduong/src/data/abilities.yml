@@ -1,5 +1,11 @@
 multidisiplinary:
   -
+    skill: User Interviews
+    rate-url: '4'
+  -
+    skill: User Testing
+    rate-url: '4'
+  -
     skill: A/B Testing
     rate-url: '4'
   -
@@ -36,9 +42,6 @@ code:
     skill: PHP
     rate-url: '3'
   -
-    skill: C Sharp
-    rate-url: '1'
-  -
     skill: jQuery
     rate-url: '3'
   -
@@ -59,9 +62,6 @@ code:
   -
     skill: GulpJS/GruntJS
     rate-url: '2'
-  -
-    skill: SQL Database
-    rate-url: '1'
   -
     skill: Wordpress
     rate-url: '4'
