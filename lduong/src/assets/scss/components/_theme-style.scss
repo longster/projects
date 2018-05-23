@@ -6,7 +6,7 @@
   background-attachment: fixed;
   background-size: cover!important;
   background-position: center;
-  background-blend-mode: screen;
+  //background-blend-mode: screen;
 }
 @mixin vertical-align {
     position: relative;
@@ -261,7 +261,7 @@ textarea:focus {
 
 
 // Alt-Hero area
-/* Header */
+/* Header 
 .large-header {
 	position: relative;
 	width: 100%;
@@ -273,7 +273,7 @@ textarea:focus {
 }
 
 #large-header { //https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg
-	background-image: url('/assets/img/bg-triangles.png');
+	background-image: url('/assets/img/bg-design.jpg');
 }
 
 .main-title {
@@ -303,7 +303,7 @@ textarea:focus {
 		font-size: 3em;
 	}
 }
-
+*/
 
 
 
@@ -313,10 +313,7 @@ textarea:focus {
   background-color: $black;
   text-align: center;
   @include backgrounds();
-  //background-image:url('http://s8.postimg.org/lf2udl5np/4_Aihmii.jpg');
-  
-  //Space background image credit goes to https://codepen.io/MarcoGuglielmelli/pen/lLCxy 
-  background-image: url('/assets/img/bg-triangles.png');
+  background-image: url('/assets/img/bg-design.jpg');
 
   h1 {
     color: $white;
@@ -330,7 +327,7 @@ textarea:focus {
   }
 }
 .valign {
-  display: inline-block;
+  //display: inline-block;
   @include vertical-align();
 }
 .logo-hero {
